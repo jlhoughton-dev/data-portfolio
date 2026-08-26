@@ -7,6 +7,10 @@ I bridge the gap between complex operational data and decisions that actually ge
 
 ## What's in this Repo, how did it get here and why?
 
+Before any modeling could happen, I had to embark on a minor digital expedition to pull and wrangle this data into existence. Due to data privacy, I have zero past artifacts to lean on.
+
+But this is my bread and butter, so I built this entire pipeline from scratch...
+
 * **Raw Data Sourcing:** Relational tables (`employees`, `customers`, `invoices`) were ingested into a Google Cloud BigQuery environment to replicate a real-world enterprise database.
 * **Modular SQL Pipeline:** Instead of a single monolithic script, the transformation logic is broken down into structured layers:
   * **Staging (`stg_employee_hierarchy.sql`):** Standardizes employee records, handles self-joins for manager mappings, and computes active tenure.
@@ -14,14 +18,6 @@ I bridge the gap between complex operational data and decisions that actually ge
   * **Domain (`dim_support_capacity_performance.sql`):** Unifies employee data, workload metrics, and financial invoice totals using defensive engineering practices like `COALESCE` and `SAFE_DIVIDE`.
 * **Version-Controlled Code:** The clean, production-ready `SELECT` statements are stored here in GitHub to showcase clean code standards and data modeling best practices.
 * **Executive BI Integration:** The compiled BigQuery reporting view directly powers a live, interactive **Google Data Studio** dashboard designed to communicate workload balance and revenue generation to stakeholders at a glance.
-
----
-
-## 💡 What I Do
-* **Uncover & Present Insights:** Translating complex data into clear, compelling narratives and executive-ready presentations that influence business strategy.
-* **Turn Data into Strategy:** Analyzing operational performance to highlight hidden bottlenecks, trend risks, and growth opportunities.
-* **Build Scalable Infrastructure:** Designing end-to-end data pipelines and models using BigQuery, dbt, and modern analytics tools.
-* **Enable Teams:** Creating human-centered process design, interactive dashboards, and Docs-as-Code documentation portals.
 
 ---
 
@@ -37,14 +33,22 @@ I bridge the gap between complex operational data and decisions that actually ge
 
 ---
 
-## 📂 Projects Overview
+## 💡 What I Do
+* **Uncover & Present Insights:** Translating complex data into clear, compelling narratives and executive-ready presentations that influence business strategy.
+* **Turn Data into Strategy:** Analyzing operational performance to highlight hidden bottlenecks, trend risks, and growth opportunities.
+* **Build Scalable Infrastructure:** Designing end-to-end data pipelines and models using BigQuery, dbt, and modern analytics tools.
+* **Enable Teams:** Creating human-centered process design, interactive dashboards, and Docs-as-Code documentation portals.
 
-* **Workforce Intelligence & Executive Capacity Reporting**
+<!-- ---
+
+## 📂 Projects Overview -->
+
+<!-- * **Workforce Intelligence & Executive Capacity Reporting**
   * Built centralized scheduling models and delivered executive briefings to align cross-functional support capacity with dynamic workload demand.
 * **Operational Bottleneck & Churn Analysis**
   * Analyzed operational friction points, surfaced root causes of merchant retention drops, and presented findings to leadership to guide process changes.
 * **Automated Resource Allocation Model**
-  * Automated data pipelines and built interactive scenario models to present dynamic headcount allocation strategies across business units.
+  * Automated data pipelines and built interactive scenario models to present dynamic headcount allocation strategies across business units. -->
 
 ---
 
