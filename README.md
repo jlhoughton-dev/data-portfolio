@@ -5,6 +5,18 @@ I bridge the gap between complex operational data and decisions that actually ge
 
 ---
 
+## What's in this Repo, how did it get here and why?
+
+* **Raw Data Sourcing:** Relational tables (`employees`, `customers`, `invoices`) were ingested into a Google Cloud BigQuery environment to replicate a real-world enterprise database.
+* **Modular SQL Pipeline:** Instead of a single monolithic script, the transformation logic is broken down into structured layers:
+  * **Staging (`stg_employee_hierarchy.sql`):** Standardizes employee records, handles self-joins for manager mappings, and computes active tenure.
+  * **Intermediate (`stg_support_workload.sql`):** Aggregates customer portfolio counts and geographic distribution per representative.
+  * **Domain (`dim_support_capacity_performance.sql`):** Unifies employee data, workload metrics, and financial invoice totals using defensive engineering practices like `COALESCE` and `SAFE_DIVIDE`.
+* **Version-Controlled Code:** The clean, production-ready `SELECT` statements are stored here in GitHub to showcase clean code standards and data modeling best practices.
+* **Executive BI Integration:** The compiled BigQuery reporting view directly powers a live, interactive **Google Data Studio** dashboard designed to communicate workload balance and revenue generation to stakeholders at a glance.
+
+---
+
 ## 💡 What I Do
 * **Uncover & Present Insights:** Translating complex data into clear, compelling narratives and executive-ready presentations that influence business strategy.
 * **Turn Data into Strategy:** Analyzing operational performance to highlight hidden bottlenecks, trend risks, and growth opportunities.
