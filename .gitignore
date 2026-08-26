@@ -1,0 +1,12 @@
+# Local data files
+*.csv
+*.db
+*.sqlite
+
+# Secrets & Credentials
+*.json
+.env
+
+# System & OS metadata
+.DS_Store
+Thumbs.db
