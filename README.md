@@ -1,43 +1,66 @@
-# Website
+# Hi! I'm Jessica. 👋
+### Workforce Intelligence | Business Operations | Data Architecture
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+I bridge the gap between complex operational data and decisions that actually get made. With nearly a decade of experience at Shopify, I specialize in connecting frontline execution with executive leadership by modeling raw data, uncovering critical business insights, and presenting actionable narratives that drive strategy.
 
-## Installation
+---
 
-```bash
-npm install
-```
+## What's in this Repo, how did it get here and why?
 
-**Note**: feel free to use the package manager of your choice.
+Before any modeling could happen, I had to embark on a minor digital expedition to pull and wrangle this data into existence. With zero past artifacts to lean on, I built this entire pipeline from scratch.
 
-## Local Development
+* **Raw Data Sourcing:** Relational tables (`employees`, `customers`, `invoices`) were ingested into a Google Cloud BigQuery environment to replicate a real-world enterprise database.
+* **Modular SQL Pipeline:** Instead of a single monolithic script, the transformation logic is broken down into structured layers:
+  * **Staging (`stg_employee_hierarchy.sql`):** Standardizes employee records, handles self-joins for manager mappings, and computes active tenure.
+  * **Intermediate (`stg_support_workload.sql`):** Aggregates customer portfolio counts and geographic distribution per representative.
+  * **Domain (`dim_support_capacity_performance.sql`):** Unifies employee data, workload metrics, and financial invoice totals using defensive engineering practices like `COALESCE` and `SAFE_DIVIDE`.
+* **Version-Controlled Code:** The clean, production-ready `SELECT` statements are stored here in GitHub to showcase clean code standards and data modeling best practices.
+* **Executive BI Integration:** The compiled BigQuery reporting view directly powers a live, interactive **Google Data Studio** dashboard designed to communicate workload balance and revenue generation to stakeholders at a glance.
 
-```bash
-npm run start
-```
+---
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## 💡 What I Do
+* **Uncover & Present Insights:** Translating complex data into clear, compelling narratives and executive-ready presentations that influence business strategy.
+* **Turn Data into Strategy:** Analyzing operational performance to highlight hidden bottlenecks, trend risks, and growth opportunities.
+* **Build Scalable Infrastructure:** Designing end-to-end data pipelines and models using BigQuery, dbt, and modern analytics tools.
+* **Enable Teams:** Creating human-centered process design, interactive dashboards, and Docs-as-Code documentation portals.
 
-## Build
+---
 
-```bash
-npm run build
-```
+## 🛠️ Technical Toolkit
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+| Category | Tools & Technologies |
+| :--- | :--- |
+| **Insight Discovery & Storytelling** | Data Storytelling, Executive Presentations, Trend & Root-Cause Analysis, KPI Framing |
+| **Data Engineering & Modeling** | BigQuery, dbt, Apache Airflow, SQL |
+| **Business Intelligence (BI)** | Looker Studio, Tableau, Power BI |
+| **Workforce & Operations** | NICE/IEX, Teleopti, Workday |
+| **Workflow & Enablement** | GitHub (Docs-as-Code), Low-Code Tools, AI Workflows (Cursor, Claude) |
 
-## Deployment
+---
 
-Using SSH:
+<!-- ## 📂 Projects Overview
 
-```bash
-USE_SSH=true npm run deploy
-```
+* **Workforce Intelligence & Executive Capacity Reporting**
+  * Built centralized scheduling models and delivered executive briefings to align cross-functional support capacity with dynamic workload demand.
+* **Operational Bottleneck & Churn Analysis**
+  * Analyzed operational friction points, surfaced root causes of merchant retention drops, and presented findings to leadership to guide process changes.
+* **Automated Resource Allocation Model**
+  * Automated data pipelines and built interactive scenario models to present dynamic headcount allocation strategies across business units.
 
-Not using SSH:
+--- -->
 
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
+## 📬 Connect with Me
+* **GitHub:** [jlhoughton-dev](https://github.com/jlhoughton-dev)
+* **LinkedIn:** [Connect with me on LinkedIn](https://linkedin.com)
 
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+
+<!-- ### Climbing the Tooling Hill (Or: Why I Miss a Managed Data Warehouse)
+
+To make all of this happen, I had to lace up my boots and manually build out my local and cloud command center one tool at a time:
+
+* **VS Code:** Installed and configured as my local code editor to write modular SQL files and manage repository version control.
+* **DBeaver:** Set up as my database client to inspect table schemas, test queries, and connect directly to the underlying data source.
+* **Google BigQuery:** Configured from scratch as the cloud data warehouse to house raw datasets and execute transformation views.
+* **Google Data Studio:** Connected downstream for visual analytics, transforming raw query outputs into a polished executive dashboard. -->
