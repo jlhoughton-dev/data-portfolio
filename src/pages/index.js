@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import styles from './index.module.css';
@@ -10,7 +10,6 @@ export default function Home() {
       description="Professional data engineering pipelines and architecture portfolio">
       
       <main className={styles.heroMain}>
-        {/* Hero Section */}
         <div className={styles.heroContainer}>
           <span className={styles.badge}>Data Engineer & Analyst</span>
           <h1 className={styles.heroTitle}>Transforming Raw Data Into Reliable Insights</h1>
@@ -22,13 +21,12 @@ export default function Home() {
             <Link className={styles.primaryButton} to="#projects">
               Explore Projects
             </Link>
-            <Link className={styles.secondaryButton} to="https://github.com/jlhoughton" target="_blank">
-              View GitHub Profile
+            <Link className={styles.secondaryButton} to="https://github.com/jlhoughton-dev/data-portfolio" target="_blank">
+              View GitHub Repository
             </Link>
           </div>
         </div>
 
-        {/* Overview Section for Recruiters */}
         <div className={styles.sectionContainer} id="projects">
           <h2 className={styles.sectionTitle}>Featured Architecture & Pipelines</h2>
           <p className={styles.sectionDesc}>
@@ -56,7 +54,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Call to Action Footer Box */}
         <div className={styles.ctaBox}>
           <h3>Want to dive deeper into the code?</h3>
           <p>You can check out the structured documentation pages or inspect the raw repository directly.</p>
