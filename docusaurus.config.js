@@ -20,14 +20,14 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://jlhoughton.github.io',
+  url: 'https://jlhoughton-dev.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/data-portfolio/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'jlhoughton', // Usually your GitHub org/user name.
+  organizationName: 'jlhoughton-dev', // Usually your GitHub org/user name.
   projectName: 'data-portfolio', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -50,7 +50,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/jlhoughton/data-portfolio/tree/main/',
+            'https://github.com/jlhoughton-dev/data-portfolio/tree/main/',
         },
         blog: false, // Disabled blog for a clean professional portfolio focus
         theme: {
@@ -87,7 +87,7 @@ const config = {
             ],
           },
           {
-            href: 'https://github.com/jlhoughton/data-portfolio',
+            href: 'https://github.com/jlhoughton-dev/data-portfolio',
             label: 'GitHub',
             position: 'right',
           },
@@ -114,7 +114,7 @@ const config = {
             items: [
               {
                 label: 'GitHub Source',
-                href: 'https://github.com/jlhoughton/data-portfolio',
+                href: 'https://github.com/jlhoughton-dev/data-portfolio',
               },
             ],
           },
