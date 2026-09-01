@@ -1,0 +1,51 @@
+---
+sidebar_position: 5
+---
+
+# How I Built This
+
+<div className="workforceHero">
+	<div className="workforceBadge">Behind the work</div>
+	<div className="workforceDivider" />
+	<div className="workforceLead">
+		This portfolio is also a working example of how I approach a data project from a blank workspace to business-ready insight.
+	</div>
+</div>
+
+<div className="workforceSectionCard">
+
+## ☁️ Set Up the Foundation
+
+I started by sourcing relational employee, customer, and invoice data and loading it into Google Cloud BigQuery. This created a central place to query the raw tables and begin shaping them into a usable analytical foundation.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## 🧱 Build the Models
+
+I organized the SQL into layered transformations rather than relying on one large query. The models standardize employee records, map manager relationships, aggregate customer workload, and combine operational and revenue measures into a domain model.
+
+The code uses defensive practices such as `COALESCE` for missing values and `SAFE_DIVIDE` for calculations that could otherwise fail when data is incomplete.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## 📊 Connect the Insight
+
+The final model was prepared for executive reporting so capacity, workload, and portfolio performance could be reviewed together. I documented the SQL and project structure in GitHub to make the work inspectable, from raw data through the reporting layer.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## ⚙️ Tools &amp; Systems
+
+- Google Cloud BigQuery
+- SQL
+- Layered data modeling
+- Looker Studio
+- GitHub
+
+</div>

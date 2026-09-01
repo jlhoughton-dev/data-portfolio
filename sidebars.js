@@ -24,6 +24,7 @@ const sidebars = {
         'data-pipelines-and-sql-models',
         'workforce-intelligence',
         'executive-reporting',
+        'behind-the-work',
       ],
     },
   ],

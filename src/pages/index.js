@@ -23,6 +23,11 @@ export default function Home() {
           <p className={styles.heroContext}>
             This site is a way to make my skills and working approach visible. Much of my previous work was created in internal systems and cannot be shared as a traditional portfolio, so I built these projects to create concrete artifacts that demonstrate how I think, model data, and communicate insights.
           </p>
+          <Link className={styles.behindWorkLink} to="/docs/behind-the-work">
+            <span className={styles.behindWorkEyebrow}>Curious how this came together?</span>
+            <span className={styles.behindWorkTitle}>How I Built This <span aria-hidden="true">→</span></span>
+            <span className={styles.behindWorkDescription}>From a blank workspace to BigQuery, SQL models, and business-ready reporting.</span>
+          </Link>
         </div>
 
         <div className={styles.sectionContainer} id="projects">
