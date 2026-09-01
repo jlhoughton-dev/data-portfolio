@@ -71,6 +71,40 @@
   color: var(--ifm-color-primary);
 }
 
+.dashboardLinkCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 1.5rem 0 2rem;
+  padding: 1.1rem 1.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.55), rgba(239, 246, 255, 0.8));
+}
+
+.dashboardLinkCard a {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dashboardLinkCard a:hover {
+  text-decoration: underline;
+}
+
+.dashboardLinkCard span {
+  color: var(--ifm-text-color);
+  font-size: 0.9rem;
+}
+
+.dashboardLinkCard small {
+  max-width: 700px;
+  color: #64748b;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
 .workforceHero {
   margin: 1.5rem auto 2.5rem;
   padding: 2.2rem 1.5rem 1.5rem;

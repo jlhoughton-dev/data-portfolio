@@ -1,66 +1,70 @@
-# Hi! I'm Jessica. 👋
+# Hi, I'm Jessica 👋
+
 ### Workforce Intelligence | Business Operations | Data Architecture
 
-I bridge the gap between complex operational data and decisions that actually get made. With nearly a decade of experience at Shopify, I specialize in connecting frontline execution with executive leadership by modeling raw data, uncovering critical business insights, and presenting actionable narratives that drive strategy.
+I connect frontline operations to executive strategy through better data, stronger models, and clearer communication.
+
+> Much of my previous work was created in internal systems and cannot be shared as a traditional portfolio. I built this repository to create concrete, shareable artifacts that demonstrate how I think, model data, and communicate insights.
+
+**Live Showcase Site:** [Data Portfolio](https://jlhoughton-dev.github.io/data-portfolio/)
 
 ---
 
-## What's in this Repo, how did it get here and why?
+## Case Studies
 
-Before any modeling could happen, I had to embark on a minor digital expedition to pull and wrangle this data into existence. With zero past artifacts to lean on, I built this entire pipeline from scratch.
+- [Data Pipelines & SQL Models](docs/data-pipelines-and-sql-models.mdx)  
+  A layered BigQuery pipeline that transforms raw relational data into analysis-ready models.
+- [Workforce Intelligence](docs/workforce-intelligence.mdx)  
+  A workforce capacity and performance model connecting hierarchy, workload, and operational signals.
+- [Executive Reporting](docs/executive-reporting.mdx)  
+  A Data Studio reporting experience that translates capacity, workload, and revenue metrics into business insight.
+- [How I Built This](docs/behind-the-work.mdx)  
+  The setup story behind the warehouse, SQL models, reporting layer, and documentation.
 
-* **Raw Data Sourcing:** Relational tables (`employees`, `customers`, `invoices`) were ingested into a Google Cloud BigQuery environment to replicate a real-world enterprise database.
-* **Modular SQL Pipeline:** Instead of a single monolithic script, the transformation logic is broken down into structured layers:
-  * **Staging (`stg_employee_hierarchy.sql`):** Standardizes employee records, handles self-joins for manager mappings, and computes active tenure.
-  * **Intermediate (`stg_support_workload.sql`):** Aggregates customer portfolio counts and geographic distribution per representative.
-  * **Domain (`dim_support_capacity_performance.sql`):** Unifies employee data, workload metrics, and financial invoice totals using defensive engineering practices like `COALESCE` and `SAFE_DIVIDE`.
-* **Version-Controlled Code:** The clean, production-ready `SELECT` statements are stored here in GitHub to showcase clean code standards and data modeling best practices.
-* **Executive BI Integration:** The compiled BigQuery reporting view directly powers a live, interactive **Google Data Studio** dashboard designed to communicate workload balance and revenue generation to stakeholders at a glance.
+**Live Dashboard:** [Sales Support Capacity](https://datastudio.google.com/s/qoFv_wRN-UE)
 
----
+*The dashboard is a technical proof of concept demonstrating a BigQuery connection, modeled data flow, and executive reporting structure. It is not intended to represent a fully optimized production dashboard.*
 
-## 💡 What I Do
-* **Uncover & Present Insights:** Translating complex data into clear, compelling narratives and executive-ready presentations that influence business strategy.
-* **Turn Data into Strategy:** Analyzing operational performance to highlight hidden bottlenecks, trend risks, and growth opportunities.
-* **Build Scalable Infrastructure:** Designing end-to-end data pipelines and models using BigQuery, dbt, and modern analytics tools.
-* **Enable Teams:** Creating human-centered process design, interactive dashboards, and Docs-as-Code documentation portals.
+## What's in This Repo, How Did It Get Here, and Why?
 
----
+Before any modeling could happen, I had to build the data foundation from scratch. With no previous artifacts available to share, I sourced relational data, loaded it into BigQuery, created the transformation layers, and documented the work here.
 
-## 🛠️ Technical Toolkit
+- **Raw Data Sourcing:** Employee, customer, and invoice tables were loaded into Google Cloud BigQuery.
+- **Modular SQL Pipeline:** Staging, intermediate, and domain models transform the raw tables into analysis-ready data.
+- **Data Modeling:** The models connect employee hierarchy, customer workload, capacity, and revenue performance.
+- **Executive BI Integration:** The domain model powers the live Data Studio dashboard linked above.
+- **Version-Controlled Documentation:** The SQL, case studies, and portfolio site are maintained in GitHub.
+
+```text
+Raw relational data → BigQuery → Layered SQL models → Domain model → Data Studio reporting
+```
+
+## Repository Structure
+
+```text
+.
+├── docs/                         # Case studies and technical documentation
+├── models/
+│   ├── intermediate/             # Staging and intermediate SQL transformations
+│   └── domain/                   # Business-ready analytical models
+├── src/                          # Docusaurus homepage and custom styling
+├── static/                       # Public site assets
+├── .github/workflows/            # GitHub Pages deployment workflow
+├── docusaurus.config.js          # Site and deployment configuration
+└── package.json                  # Project scripts and dependencies
+```
+
+## Technical Toolkit
 
 | Category | Tools & Technologies |
 | :--- | :--- |
-| **Insight Discovery & Storytelling** | Data Storytelling, Executive Presentations, Trend & Root-Cause Analysis, KPI Framing |
-| **Data Engineering & Modeling** | BigQuery, dbt, Apache Airflow, SQL |
-| **Business Intelligence (BI)** | Looker Studio, Tableau, Power BI |
-| **Workforce & Operations** | NICE/IEX, Teleopti, Workday |
-| **Workflow & Enablement** | GitHub (Docs-as-Code), Low-Code Tools, AI Workflows (Cursor, Claude) |
+| Data Engineering & Modeling | BigQuery, SQL, dbt-style layered modeling |
+| Business Intelligence | Data Studio, Tableau, Power BI |
+| Insight & Storytelling | KPI framing, root-cause analysis, executive presentations |
+| Workforce & Operations | NICE/IEX, Teleopti, Workday |
+| Workflow & Documentation | GitHub, Docusaurus, Docs-as-Code |
 
----
+## Connect With Me
 
-<!-- ## 📂 Projects Overview
-
-* **Workforce Intelligence & Executive Capacity Reporting**
-  * Built centralized scheduling models and delivered executive briefings to align cross-functional support capacity with dynamic workload demand.
-* **Operational Bottleneck & Churn Analysis**
-  * Analyzed operational friction points, surfaced root causes of merchant retention drops, and presented findings to leadership to guide process changes.
-* **Automated Resource Allocation Model**
-  * Automated data pipelines and built interactive scenario models to present dynamic headcount allocation strategies across business units.
-
---- -->
-
-## 📬 Connect with Me
-* **GitHub:** [jlhoughton-dev](https://github.com/jlhoughton-dev)
-* **LinkedIn:** [Connect with me on LinkedIn](https://linkedin.com)
-
-
-
-<!-- ### Climbing the Tooling Hill (Or: Why I Miss a Managed Data Warehouse)
-
-To make all of this happen, I had to lace up my boots and manually build out my local and cloud command center one tool at a time:
-
-* **VS Code:** Installed and configured as my local code editor to write modular SQL files and manage repository version control.
-* **DBeaver:** Set up as my database client to inspect table schemas, test queries, and connect directly to the underlying data source.
-* **Google BigQuery:** Configured from scratch as the cloud data warehouse to house raw datasets and execute transformation views.
-* **Google Data Studio:** Connected downstream for visual analytics, transforming raw query outputs into a polished executive dashboard. -->
+- **GitHub:** [jlhoughton-dev](https://github.com/jlhoughton-dev)
+- **LinkedIn:** [Add your LinkedIn profile link here](https://linkedin.com)
