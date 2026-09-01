@@ -1,0 +1,73 @@
+---
+sidebar_position: 3
+---
+
+# Data Pipelines & SQL Models
+
+<div className="workforceHero">
+	<div className="workforceBadge">Modular data foundations</div>
+	<div className="workforceDivider" />
+	<div className="workforceLead">
+		I built a layered data pipeline in BigQuery that transformed raw relational data into dependable models for workforce analysis and executive reporting.
+	</div>
+</div>
+
+<div className="workforceSectionCard">
+
+## 🧭 Situation
+
+The project began without existing data models or reporting artifacts. Raw employee, customer, and invoice tables were available, but the information was not yet organized into a structure that could support consistent analysis.
+
+The challenge was to create a foundation that could be understood, extended, and trusted by the people using it.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## 🎯 Task
+
+The goal was to build a repeatable transformation pipeline that moved from raw source data to analysis-ready business models.
+
+The pipeline needed to standardize source records, preserve clear relationships between entities, and prepare the data for workforce capacity and performance reporting.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## 🛠️ Action
+
+I organized the transformation logic into modular SQL layers so each step had a clear purpose and could be reviewed independently.
+
+This included:
+
+- standardizing employee records and calculating active tenure
+- mapping employee and manager relationships through a self-join
+- aggregating customer portfolios and geographic coverage by support representative
+- joining workload, hierarchy, and revenue metrics into a domain model
+- using `COALESCE` and `SAFE_DIVIDE` to handle missing values and prevent unreliable calculations
+
+The result was a pipeline that favored clarity, reusable logic, and defensible reporting outputs over a single monolithic query.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## 📈 Result
+
+The finished models created a dependable analytical foundation for understanding support capacity, workload distribution, and portfolio performance.
+
+The layered structure made the work easier to maintain and gave downstream reporting a consistent source of truth. It also created a clear path from raw data to business-facing insight.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## ⚙️ Tools &amp; Systems
+
+- SQL
+- Google Cloud BigQuery
+- dbt-style layered data modeling
+- GitHub
+- Data documentation
+
+</div>

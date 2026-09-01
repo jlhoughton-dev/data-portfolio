@@ -11,18 +11,22 @@ export default function Home() {
 
       <main className={styles.heroMain}>
         <div className={styles.heroContainer}>
-          <h1 className={styles.heroTitle}>Hi, I’m Jessica 👋</h1>
-          <div className={styles.badgeWrap}>
-            <span className={styles.badge}>Workforce Intelligence • Business Operations • Data Architecture</span>
-          </div>
-          <div className={styles.divider} aria-hidden="true" />
+          <span className={styles.badge}>Workforce Intelligence | Business Operations | Data Architecture</span>
+          <h1 className={styles.heroTitle}>Operational Data, Clearer Decisions</h1>
           <p className={styles.heroSubtitle}>
-            I connect frontline operations to executive strategy through better data, stronger models, and clearer communication.
+            I help organizations connect frontline execution to executive strategy through better data,
+            stronger models, and clearer communication. My work sits at the intersection of business
+            operations, workforce intelligence, and data architecture—turning raw operational data into
+            insight that drives action.
           </p>
-          <h2 className={styles.heroContextTitle}>Making the Work Visible</h2>
-          <p className={styles.heroContext}>
-            This site is a way to make my skills and working approach visible. Much of my previous work was created in internal systems and cannot be shared as a traditional portfolio, so I built these projects to create concrete artifacts that demonstrate how I think, model data, and communicate insights.
-          </p>
+          <div className={styles.heroButtons}>
+            <Link className={styles.primaryButton} to="#projects">
+              Explore Projects
+            </Link>
+            <Link className={styles.secondaryButton} to="https://github.com/jlhoughton-dev/data-portfolio" target="_blank">
+              View GitHub Repository
+            </Link>
+          </div>
         </div>
 
         <div className={styles.sectionContainer} id="projects">
@@ -32,40 +36,34 @@ export default function Home() {
           </p>
 
           <div className={styles.cardGrid}>
-            <Link className={styles.cardLink} to="/docs/data-pipelines-and-sql-models">
-              <div className={styles.card}>
+            <div className={styles.card}>
               <div className={styles.cardIcon}>📊</div>
               <h3>Data Pipelines & SQL Models</h3>
               <p>Clean, modular transformations that create reliable foundations for analysis and reporting.</p>
-              </div>
-            </Link>
+            </div>
 
-            <Link className={styles.cardLink} to="/docs/workforce-intelligence">
-              <div className={styles.card}>
+            <div className={styles.card}>
               <div className={styles.cardIcon}>👥</div>
               <h3>Workforce Intelligence</h3>
               <p>Operational metrics and staffing models that help teams understand workload, capacity, and performance.</p>
-              </div>
-            </Link>
+            </div>
 
-            <Link className={styles.cardLink} to="/docs/executive-reporting">
-              <div className={styles.card}>
+            <div className={styles.card}>
               <div className={styles.cardIcon}>📈</div>
               <h3>Executive Reporting</h3>
               <p>Dashboards and business narratives that translate technical data into clear strategic insight.</p>
-              </div>
-            </Link>
+            </div>
           </div>
         </div>
 
         <div className={styles.ctaBox}>
           <h3>Want to see how the work is structured behind the scenes?</h3>
           <p>
-            Explore the models, SQL, and reporting foundations behind these projects.
+            I document the full lifecycle of the work—from raw data to modeling, reporting, and business decision support—so the technical foundation is as clear as the business outcome.
           </p>
           <div className={styles.heroButtons} style={{ justifyContent: 'center', marginTop: '1.5rem' }}>
-            <Link className={styles.primaryButton} to="https://github.com/jlhoughton-dev/data-portfolio" target="_blank">
-              View GitHub Repository
+            <Link className={styles.primaryButton} to="/docs/intro">
+              Read Documentation Hub
             </Link>
           </div>
         </div>

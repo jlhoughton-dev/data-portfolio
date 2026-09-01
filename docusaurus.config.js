@@ -71,12 +71,21 @@ const config = {
       navbar: {
         title: 'Data Portfolio',
         logo: {
-          alt: 'Portfolio Logo',
-          src: 'img/logo.svg',
+          alt: 'Data Portfolio home',
+          src: 'img/visual-1.svg',
         },
         items: [
-          {to: '/', label: 'Overview', position: 'left'},
-          {to: '/docs/intro', label: 'Documentation Hub', position: 'left'},
+          {to: '/', label: 'Home', position: 'left'},
+          {to: '/docs/intro', label: 'Portfolio Overview', position: 'left'},
+          {
+            label: 'Case Studies',
+            position: 'left',
+            items: [
+              {to: '/docs/data-pipelines-and-sql-models', label: 'Data Pipelines & SQL Models'},
+              {to: '/docs/workforce-intelligence', label: 'Workforce Intelligence'},
+              {to: '/docs/executive-reporting', label: 'Executive Reporting'},
+            ],
+          },
           {
             href: 'https://github.com/jlhoughton/data-portfolio',
             label: 'GitHub',
@@ -91,7 +100,7 @@ const config = {
             title: 'Navigation',
             items: [
               {
-                label: 'Overview',
+                label: 'Home',
                 to: '/',
               },
               {
