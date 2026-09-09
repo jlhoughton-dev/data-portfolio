@@ -17,6 +17,7 @@
 const sidebars = {
   tutorialSidebar: [
     'intro',
+    'workforce-intelligence-case-study',
     {
       type: 'category',
       label: 'Case Studies',
