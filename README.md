@@ -57,10 +57,10 @@ This gives the repo a real data engineering foundation behind the reporting work
 Before any modeling could happen, I had to build the data foundation from scratch. With no previous artifacts available to share, I sourced relational data, loaded it into BigQuery, created the transformation layers, and documented the work here.
 
 - **Raw Data Sourcing:** Employee, customer, and invoice tables were loaded into Google Cloud BigQuery.
-- **Modular SQL Pipeline:** Staging, intermediate, and domain models transform the raw tables into analysis-ready data.
+- **dbt Transformation Pipeline:** dbt manages the source definitions, layered SQL models, materializations, and validation tests that transform the raw tables into analysis-ready data.
 - **Data Modeling:** The models connect employee hierarchy, customer workload, capacity, and revenue performance.
 - **Executive BI Integration:** The domain model powers the live Data Studio dashboard linked above.
-- **Version-Controlled Documentation:** The SQL, case studies, and portfolio site are maintained in GitHub.
+- **Version-Controlled Documentation:** The SQL, dbt configuration, case studies, and portfolio site are maintained in GitHub.
 
 ```text
 Raw relational data → BigQuery → Layered SQL models → Domain model → Data Studio reporting
@@ -70,26 +70,56 @@ Raw relational data → BigQuery → Layered SQL models → Domain model → Dat
 
 ```text
 .
-├── docs/                         # Case studies and technical documentation
+├── dbt_project.yml               # dbt project and model materialization settings
 ├── models/
-│   ├── intermediate/             # Staging and intermediate SQL transformations
-│   └── domain/                   # Business-ready analytical models
-├── src/                          # Docusaurus homepage and custom styling
-├── static/                       # Public site assets
-├── .github/workflows/            # GitHub Pages deployment workflow
-├── docusaurus.config.js          # Site and deployment configuration
-└── package.json                  # Project scripts and dependencies
+│   ├── sources.yml                # BigQuery chinook_raw source declarations
+│   ├── schema.yml                 # dbt model documentation and data-quality tests
+│   ├── intermediate/              # Cleaned and joined workforce transformations
+│   │   ├── stg_employee_hierarchy.sql
+│   │   └── stg_support_workload.sql
+│   └── domain/                    # Business-ready analytical models
+│       └── dim_support_capacity_performance.sql
+├── docs/                          # Case studies and technical documentation
+│   └── dbt-bigquery-setup.mdx     # dbt and BigQuery implementation notes
+├── dashboards/                    # Reporting and dashboard assets
+├── src/                           # Docusaurus homepage and custom styling
+│   ├── pages/                     # Homepage and preview routes
+│   └── css/                      # Global site theme and case-study styles
+├── static/                        # Public site assets
+├── .github/workflows/             # GitHub Pages deployment workflow
+├── docusaurus.config.js            # Site navigation and deployment configuration
+├── sidebars.js                    # Docs sidebar and case-study navigation
+├── package.json                   # Docusaurus scripts and dependencies
+└── README.md                      # Project overview and implementation narrative
 ```
 
 ## Technical Toolkit
 
 | Category | Tools & Technologies |
 | :--- | :--- |
-| Data Engineering & Modeling | BigQuery, SQL, dbt-style layered modeling |
-| Business Intelligence | Data Studio, Tableau, Power BI |
+| Data Engineering & Modeling | Google BigQuery, SQL, dbt Core 1.12.4, dbt-bigquery 1.12.0 |
+| dbt Workflow | Source declarations, staging/intermediate models, domain models, view/table materializations, schema tests |
+| Cloud & Authentication | Google Cloud project `jlhoughton-dev`, BigQuery dataset `chinook_raw`, gcloud and application-default credentials |
+| Business Intelligence | Looker Studio (formerly Data Studio), Tableau, Power BI |
 | Insight & Storytelling | KPI framing, root-cause analysis, executive presentations |
 | Workforce & Operations | NICE/IEX, Teleopti, Workday |
-| Workflow & Documentation | GitHub, Docusaurus, Docs-as-Code |
+| Portfolio & Documentation | Docusaurus 3.10.2, React 19, MDX, JavaScript, CSS, GitHub Pages, Docs-as-Code |
+
+### dbt project pattern
+
+The dbt implementation follows a simple layered architecture:
+
+```text
+BigQuery chinook_raw sources
+  ↓
+Intermediate models: hierarchy and support workload
+  ↓
+Domain model: support capacity and performance
+  ↓
+Looker Studio reporting and case-study insights
+```
+
+The dbt profile is kept in the local `~/.dbt/profiles.yml` file rather than committed to the repository. This keeps connection and authentication settings out of version control while allowing the project configuration, SQL models, source definitions, and tests to remain shareable.
 
 ## Connect With Me
 
