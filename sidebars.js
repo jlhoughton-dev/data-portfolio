@@ -17,12 +17,12 @@
 const sidebars = {
   tutorialSidebar: [
     'intro',
-    'workforce-intelligence-case-study',
     {
       type: 'category',
       label: 'Case Studies',
       items: [
         'data-pipelines-and-sql-models',
+        'workforce-intelligence',
         'executive-reporting',
         'behind-the-work',
       ],

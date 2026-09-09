@@ -78,9 +78,9 @@
   gap: 0.45rem;
   margin: 1.5rem 0 2rem;
   padding: 1.1rem 1.5rem;
-  border: 1px solid rgba(127, 29, 29, 0.18);
+  border: 1px solid rgba(59, 130, 246, 0.18);
   border-radius: 1rem;
-  background: linear-gradient(135deg, rgba(254, 242, 242, 0.7), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.7), rgba(255, 255, 255, 0.9));
 }
 
 .dashboardLinkCard a {
@@ -108,18 +108,30 @@
 .workforceHero {
   margin: 1.5rem auto 2.5rem;
   padding: 2.2rem 1.5rem 1.5rem;
-  border: 1px solid rgba(127, 29, 29, 0.14);
+  border: 1px solid rgba(59, 130, 246, 0.14);
   border-radius: 1.5rem;
-  background: linear-gradient(180deg, rgba(254, 242, 242, 0.75), rgba(255, 255, 255, 0.9));
-  box-shadow: 0 18px 40px -28px rgba(127, 29, 29, 0.28);
+  background: linear-gradient(180deg, rgba(239, 246, 255, 0.75), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 18px 40px -28px rgba(37, 99, 235, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.workforceHero > .workforceBadge,
+.workforceHero > .workforceDivider,
+.workforceHero > .workforceLead {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .workforceBadge {
   display: inline-block;
   padding: 0.5rem 1rem;
   border-radius: 999px;
-  background: rgba(127, 29, 29, 0.08);
-  color: #7f1d1d;
+  background: rgba(59, 130, 246, 0.08);
+  color: #1d4ed8;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -130,10 +142,11 @@
   width: 72px;
   height: 2px;
   margin: 1.1rem auto 1.4rem;
-  background: linear-gradient(90deg, transparent, rgba(127, 29, 29, 0.8), transparent);
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent);
 }
 
 .workforceLead {
+  width: 100%;
   max-width: 760px;
   margin: 0 auto;
   color: var(--ifm-text-color);
@@ -142,13 +155,17 @@
   text-align: center;
 }
 
+.workforceLead p {
+  text-align: center;
+}
+
 .workforceSectionCard {
   margin: 1.25rem 0;
   padding: 1.75rem 2rem 1.9rem;
-  border: 1px solid rgba(127, 29, 29, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.12);
   border-radius: 1.25rem;
-  background: linear-gradient(135deg, rgba(254, 242, 242, 0.65), rgba(255, 255, 255, 0.94));
-  box-shadow: 0 14px 32px -26px rgba(127, 29, 29, 0.28);
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.65), rgba(255, 255, 255, 0.94));
+  box-shadow: 0 14px 32px -26px rgba(37, 99, 235, 0.28);
   text-align: left;
 }
 
@@ -161,7 +178,7 @@
 
 .workforceSectionCard p {
   margin: 0.75rem auto;
-  text-align: left;
+  text-align: center;
 }
 
 .workforceSectionCard p:last-child {

@@ -82,6 +82,7 @@ const config = {
             position: 'left',
             items: [
               {to: '/docs/data-pipelines-and-sql-models', label: 'Data Pipelines & SQL Models'},
+              {to: '/docs/workforce-intelligence', label: 'Workforce Intelligence'},
               {to: '/docs/executive-reporting', label: 'Executive Reporting'},
             ],
           },
