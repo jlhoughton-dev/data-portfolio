@@ -1,0 +1,630 @@
+[0m22:30:57.362974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1097c1400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af1ae90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af1ad50>]}
+
+
+============================== 22:30:57.371483 | 8105933e-78c8-46f2-a732-e44b9ed3c062 ==============================
+[0m22:30:57.371483 [info ] [MainThread]: Running with dbt=1.12.4
+[0m22:30:57.372065 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'log_cache_events': 'False', 'log_path': '/Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/logs', 'fail_fast': 'False', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'profiles_dir': '/Users/jlhoughton/.dbt', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'no_print': 'None', 'use_colors': 'True', 'write_json': 'True', 'target_path': 'None', 'warn_error': 'None', 'quiet': 'False', 'debug': 'False', 'use_experimental_parser': 'False', 'empty': 'None', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'version_check': 'True'}
+[0m22:30:57.389492 [info ] [MainThread]: dbt version: 1.12.4
+[0m22:30:57.391564 [info ] [MainThread]: python version: 3.14.7
+[0m22:30:57.391949 [info ] [MainThread]: python path: /Users/jlhoughton/data_env/bin/python
+[0m22:30:57.392208 [info ] [MainThread]: os info: macOS-26.5.1-arm64-arm-64bit-Mach-O
+[0m22:30:59.048203 [info ] [MainThread]: Using profiles dir at /Users/jlhoughton/.dbt
+[0m22:30:59.049106 [info ] [MainThread]: Using profiles.yml file at /Users/jlhoughton/.dbt/profiles.yml
+[0m22:30:59.049450 [info ] [MainThread]: Using dbt_project.yml file at /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/dbt_project.yml
+[0m22:30:59.049738 [info ] [MainThread]: adapter type: bigquery
+[0m22:30:59.050576 [info ] [MainThread]: adapter version: 1.12.0
+[0m22:30:59.191125 [info ] [MainThread]: Configuration:
+[0m22:30:59.191641 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:30:59.191899 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:30:59.192174 [info ] [MainThread]: Required dependencies:
+[0m22:30:59.192708 [debug] [MainThread]: Executing "git --help"
+[0m22:30:59.213161 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   history    EXPERIMENTAL: Rewrite history\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:30:59.214123 [debug] [MainThread]: STDERR: "b''"
+[0m22:30:59.214404 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:30:59.214744 [info ] [MainThread]: Connection:
+[0m22:30:59.215165 [info ] [MainThread]:   method: oauth
+[0m22:30:59.215493 [info ] [MainThread]:   database: jlhoughton-dev
+[0m22:30:59.215874 [info ] [MainThread]:   execution_project: jlhoughton-dev
+[0m22:30:59.216096 [info ] [MainThread]:   schema: chinook_raw
+[0m22:30:59.216252 [info ] [MainThread]:   location: US
+[0m22:30:59.216748 [info ] [MainThread]:   priority: interactive
+[0m22:30:59.218248 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m22:30:59.218773 [info ] [MainThread]:   reservation: None
+[0m22:30:59.219801 [info ] [MainThread]:   impersonate_service_account: None
+[0m22:30:59.220547 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m22:30:59.220871 [info ] [MainThread]:   job_retries: 1
+[0m22:30:59.221316 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m22:30:59.221619 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m22:30:59.221869 [info ] [MainThread]:   job_link_info_level_log: False
+[0m22:30:59.222084 [info ] [MainThread]:   timeout_seconds: 300
+[0m22:30:59.222291 [info ] [MainThread]:   client_id: None
+[0m22:30:59.222498 [info ] [MainThread]:   token_uri: None
+[0m22:30:59.222705 [info ] [MainThread]:   compute_region: None
+[0m22:30:59.222912 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m22:30:59.223117 [info ] [MainThread]:   gcs_bucket: None
+[0m22:30:59.223318 [info ] [MainThread]:   dataproc_batch: None
+[0m22:30:59.224072 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m22:30:59.359723 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m22:30:59.360261 [debug] [MainThread]: On debug: select 1 as id
+[0m22:30:59.360587 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:31:01.180429 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:266edea3-e5f5-4c20-8623-76280ade249b&page=queryresults
+[0m22:31:01.392370 [debug] [MainThread]: SQL status: OK in 0.211 seconds
+[0m22:31:01.831450 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:31:01.832207 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:31:01.846664 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 4.576663, "process_in_blocks": "0", "process_kernel_time": 0.705517, "process_mem_max_rss": "237633536", "process_out_blocks": "0", "process_user_time": 3.273249}
+[0m22:31:01.847964 [debug] [MainThread]: Command `dbt debug` succeeded at 22:31:01.847716 after 4.58 seconds
+[0m22:31:01.848394 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:31:01.848826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118955cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118aefbf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118ad5260>]}
+[0m22:31:01.849422 [debug] [MainThread]: Flushing usage events
+[0m22:31:01.987928 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:31:21.284188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbd1400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f32ae90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f32ad50>]}
+
+
+============================== 22:31:21.288666 | 1729726a-5f9d-43cc-abf7-09db826f4270 ==============================
+[0m22:31:21.288666 [info ] [MainThread]: Running with dbt=1.12.4
+[0m22:31:21.289226 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'quiet': 'False', 'debug': 'False', 'maximum_seed_size_mib': '1', 'log_format': 'default', 'introspect': 'True', 'partial_parse': 'True', 'target_path': 'None', 'hints_enabled': 'True', 'fail_fast': 'False', 'no_print': 'None', 'static_parser': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'profiles_dir': '/Users/jlhoughton/.dbt', 'invocation_command': 'dbt ls', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'log_cache_events': 'False', 'use_colors': 'True', 'log_path': '/Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/logs', 'write_json': 'True', 'version_check': 'True', 'warn_error': 'None'}
+[0m22:31:22.834770 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1729726a-5f9d-43cc-abf7-09db826f4270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ccaf490>]}
+[0m22:31:23.043849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1729726a-5f9d-43cc-abf7-09db826f4270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bedbdf0>]}
+[0m22:31:23.045916 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m22:31:23.282163 [debug] [MainThread]: checksum: 58bdd5699549d142caac3b1b885f78dbe91a8ca8f161d75e4c2bbdd5975993de, vars: {}, profile: data_portfolio, target: dev, version: 1.12.4
+[0m22:31:23.283442 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:31:23.283923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1729726a-5f9d-43cc-abf7-09db826f4270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11ccfa050>]}
+[0m22:31:25.120243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1729726a-5f9d-43cc-abf7-09db826f4270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1202bb4d0>]}
+[0m22:31:25.229347 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/manifest.json
+[0m22:31:25.232728 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/semantic_manifest.json
+[0m22:31:25.250914 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/osi_document.json
+[0m22:31:25.273632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1729726a-5f9d-43cc-abf7-09db826f4270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d3e1550>]}
+[0m22:31:25.274140 [info ] [MainThread]: Found 3 models, 4 data tests, 11 sources, 561 macros
+[0m22:31:25.274422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1729726a-5f9d-43cc-abf7-09db826f4270', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d33d3d0>]}
+[0m22:31:25.275428 [info ] [MainThread]: data_portfolio.domain.dim_support_capacity_performance
+[0m22:31:25.275994 [info ] [MainThread]: data_portfolio.intermediate.stg_employee_hierarchy
+[0m22:31:25.276352 [info ] [MainThread]: data_portfolio.intermediate.stg_support_workload
+[0m22:31:25.276583 [info ] [MainThread]: source:data_portfolio.chinook_raw.albums
+[0m22:31:25.276801 [info ] [MainThread]: source:data_portfolio.chinook_raw.artists
+[0m22:31:25.277012 [info ] [MainThread]: source:data_portfolio.chinook_raw.customers
+[0m22:31:25.277225 [info ] [MainThread]: source:data_portfolio.chinook_raw.employees
+[0m22:31:25.277445 [info ] [MainThread]: source:data_portfolio.chinook_raw.genres
+[0m22:31:25.277641 [info ] [MainThread]: source:data_portfolio.chinook_raw.invoiceitems
+[0m22:31:25.277833 [info ] [MainThread]: source:data_portfolio.chinook_raw.invoices
+[0m22:31:25.278027 [info ] [MainThread]: source:data_portfolio.chinook_raw.mediatypes
+[0m22:31:25.278226 [info ] [MainThread]: source:data_portfolio.chinook_raw.playlists
+[0m22:31:25.278418 [info ] [MainThread]: source:data_portfolio.chinook_raw.playlisttrack
+[0m22:31:25.278610 [info ] [MainThread]: source:data_portfolio.chinook_raw.tracks
+[0m22:31:25.278804 [info ] [MainThread]: data_portfolio.not_null_dim_support_capacity_performance_employee_id
+[0m22:31:25.278999 [info ] [MainThread]: data_portfolio.not_null_stg_employee_hierarchy_employee_id
+[0m22:31:25.279193 [info ] [MainThread]: data_portfolio.not_null_stg_support_workload_employee_id
+[0m22:31:25.279385 [info ] [MainThread]: data_portfolio.unique_stg_employee_hierarchy_employee_id
+[0m22:31:25.285469 [debug] [MainThread]: Resource report: {"command_name": "list", "command_success": true, "command_wall_clock_time": 4.0888658, "process_in_blocks": "0", "process_kernel_time": 0.688236, "process_mem_max_rss": "261636096", "process_out_blocks": "0", "process_user_time": 4.985322}
+[0m22:31:25.286196 [debug] [MainThread]: Command `dbt ls` succeeded at 22:31:25.286100 after 4.09 seconds
+[0m22:31:25.286530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1203b3050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cddd860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10df0be30>]}
+[0m22:31:25.286836 [debug] [MainThread]: Flushing usage events
+[0m22:31:25.408995 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:32:14.828317 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a45400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1ef110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1ef9d0>]}
+
+
+============================== 22:32:14.834411 | 3334acaf-36d7-48eb-8b60-d23c47b2db37 ==============================
+[0m22:32:14.834411 [info ] [MainThread]: Running with dbt=1.12.4
+[0m22:32:14.835089 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'introspect': 'True', 'hints_enabled': 'True', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'profiles_dir': '/Users/jlhoughton/.dbt', 'target_path': 'None', 'write_json': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'static_parser': 'True', 'log_format': 'default', 'debug': 'False', 'version_check': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select stg_employee_hierarchy stg_support_workload dim_support_capacity_performance', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'partial_parse': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/logs', 'fail_fast': 'False'}
+[0m22:32:16.417659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118bf10f0>]}
+[0m22:32:16.488414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cf7df0>]}
+[0m22:32:16.489249 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m22:32:16.649074 [debug] [MainThread]: checksum: 58bdd5699549d142caac3b1b885f78dbe91a8ca8f161d75e4c2bbdd5975993de, vars: {}, profile: data_portfolio, target: dev, version: 1.12.4
+[0m22:32:16.826752 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:32:16.827282 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:32:16.827565 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:32:16.838244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1191d6550>]}
+[0m22:32:17.017189 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/manifest.json
+[0m22:32:17.021009 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/semantic_manifest.json
+[0m22:32:17.044963 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/osi_document.json
+[0m22:32:17.059337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1193316d0>]}
+[0m22:32:17.059908 [info ] [MainThread]: Found 3 models, 4 data tests, 11 sources, 561 macros
+[0m22:32:17.060235 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119360ad0>]}
+[0m22:32:17.062501 [info ] [MainThread]: 
+[0m22:32:17.062907 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:32:17.063198 [info ] [MainThread]: 
+[0m22:32:17.063743 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:32:17.071017 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_jlhoughton-dev'
+[0m22:32:17.071528 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:32:18.489161 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_jlhoughton-dev, now list_jlhoughton-dev_chinook_raw)
+[0m22:32:18.490058 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:32:18.979974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2964e0>]}
+[0m22:32:18.980814 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:32:18.989147 [debug] [Thread-1 (]: Began running node model.data_portfolio.dim_support_capacity_performance
+[0m22:32:18.989628 [debug] [Thread-3 (]: Began running node model.data_portfolio.stg_support_workload
+[0m22:32:18.989996 [debug] [Thread-2 (]: Began running node model.data_portfolio.stg_employee_hierarchy
+[0m22:32:18.992242 [info ] [Thread-2 (]: 2 of 3 START sql view model chinook_raw.stg_employee_hierarchy ................. [RUN]
+[0m22:32:18.992809 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.data_portfolio.stg_employee_hierarchy'
+[0m22:32:18.990527 [info ] [Thread-1 (]: 1 of 3 START sql table model chinook_raw.dim_support_capacity_performance ...... [RUN]
+[0m22:32:18.993566 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_jlhoughton-dev_chinook_raw, now model.data_portfolio.dim_support_capacity_performance)
+[0m22:32:18.991468 [info ] [Thread-3 (]: 3 of 3 START sql view model chinook_raw.stg_support_workload ................... [RUN]
+[0m22:32:18.994360 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.data_portfolio.stg_support_workload'
+[0m22:32:18.993142 [debug] [Thread-2 (]: Began compiling node model.data_portfolio.stg_employee_hierarchy
+[0m22:32:18.994672 [debug] [Thread-3 (]: Began compiling node model.data_portfolio.stg_support_workload
+[0m22:32:18.993935 [debug] [Thread-1 (]: Began compiling node model.data_portfolio.dim_support_capacity_performance
+[0m22:32:19.012263 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_portfolio.dim_support_capacity_performance"
+[0m22:32:19.011350 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_portfolio.stg_support_workload"
+[0m22:32:19.010682 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_portfolio.stg_employee_hierarchy"
+[0m22:32:19.013437 [debug] [Thread-3 (]: Began executing node model.data_portfolio.stg_support_workload
+[0m22:32:19.032032 [debug] [Thread-2 (]: Began executing node model.data_portfolio.stg_employee_hierarchy
+[0m22:32:19.072547 [debug] [Thread-1 (]: Began executing node model.data_portfolio.dim_support_capacity_performance
+[0m22:32:19.073325 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_portfolio.stg_support_workload"
+[0m22:32:19.073865 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_portfolio.stg_employee_hierarchy"
+[0m22:32:19.084236 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:32:19.086537 [debug] [Thread-2 (]: On model.data_portfolio.stg_employee_hierarchy: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "data_portfolio", "target_name": "dev", "node_id": "model.data_portfolio.stg_employee_hierarchy"} */
+
+
+  create or replace view `jlhoughton-dev`.`chinook_raw`.`stg_employee_hierarchy`
+  OPTIONS()
+  as -- models/intermediate/stg_employee_hierarchy.sql
+-- Cleans employee details and resolves management hierarchy reporting lines
+
+WITH raw_employees AS (
+  SELECT
+    EmployeeId AS employee_id,
+    FirstName AS first_name,
+    LastName AS last_name,
+    CONCAT(FirstName, ' ', LastName) AS employee_full_name,
+    Title AS job_title,
+    ReportsTo AS reports_to_id,
+    TIMESTAMP(BirthDate) AS birth_date,
+    TIMESTAMP(HireDate) AS hire_date,
+    Address AS address,
+    City AS city,
+    State AS state,
+    Country AS country,
+    PostalCode AS postal_code,
+    Phone AS phone,
+    Fax AS fax,
+    Email AS email
+  FROM
+    `jlhoughton-dev.chinook_raw.employees`
+)
+
+SELECT
+  e.employee_id,
+  e.employee_full_name,
+  e.job_title,
+  e.reports_to_id,
+  m.employee_full_name AS manager_full_name,
+  m.job_title AS manager_job_title,
+  e.hire_date,
+  -- Calculate employee tenure in years
+  DATE_DIFF(CURRENT_DATE(), DATE(e.hire_date), YEAR) AS tenure_years,
+  e.city,
+  e.state,
+  e.country,
+  e.email
+FROM
+  raw_employees AS e
+LEFT JOIN
+  raw_employees AS m
+ON
+  e.reports_to_id = m.employee_id;;
+
+
+[0m22:32:19.087440 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:32:19.087000 [debug] [Thread-3 (]: On model.data_portfolio.stg_support_workload: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "data_portfolio", "target_name": "dev", "node_id": "model.data_portfolio.stg_support_workload"} */
+
+
+  create or replace view `jlhoughton-dev`.`chinook_raw`.`stg_support_workload`
+  OPTIONS()
+  as -- models/intermediate/stg_support_workload.sql
+-- Aggregates customer portfolio distribution per sales support representative
+
+WITH raw_customers AS (
+  SELECT
+    CustomerId AS customer_id,
+    CONCAT(FirstName, ' ', LastName) AS customer_full_name,
+    Company AS company,
+    Country AS customer_country,
+    SupportRepId AS support_rep_id
+  FROM
+    `jlhoughton-dev.chinook_raw.customers`
+)
+
+SELECT
+  c.support_rep_id AS employee_id,
+  COUNT(DISTINCT c.customer_id) AS total_assigned_customers,
+  COUNT(DISTINCT c.customer_country) AS countries_covered,
+  -- Identify how many international clients the rep supports
+  COUNTIF(c.customer_country != 'USA') AS international_customer_count
+FROM
+  raw_customers AS c
+WHERE
+  c.support_rep_id IS NOT NULL
+GROUP BY
+  1;;
+
+
+[0m22:32:19.088633 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:32:19.393596 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:52bb2ba9-f298-4832-8151-677827d75620&page=queryresults
+[0m22:32:19.394286 [error] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:52bb2ba9-f298-4832-8151-677827d75620&page=queryresults
+[0m22:32:19.402195 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:d4164550-6042-4f1f-8e65-464c372ac9c0&page=queryresults
+[0m22:32:19.402786 [error] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:d4164550-6042-4f1f-8e65-464c372ac9c0&page=queryresults
+[0m22:32:19.418484 [debug] [Thread-2 (]: Database Error in model stg_employee_hierarchy (models/intermediate/stg_employee_hierarchy.sql)
+  Syntax error: Unexpected ";" at [50:35]
+  compiled code at target/run/data_portfolio/models/intermediate/stg_employee_hierarchy.sql
+[0m22:32:19.422159 [debug] [Thread-3 (]: Database Error in model stg_support_workload (models/intermediate/stg_support_workload.sql)
+  Syntax error: Unexpected ";" at [31:5]
+  compiled code at target/run/data_portfolio/models/intermediate/stg_support_workload.sql
+[0m22:32:19.423273 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1193e1790>]}
+[0m22:32:19.423541 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d49180>]}
+[0m22:32:19.424100 [error] [Thread-2 (]: 2 of 3 ERROR creating sql view model chinook_raw.stg_employee_hierarchy ........ [[31mERROR[0m in 0.43s]
+[0m22:32:19.425496 [debug] [Thread-2 (]: Finished running node model.data_portfolio.stg_employee_hierarchy
+[0m22:32:19.426484 [debug] [Thread-7 (]: Marking all children of 'model.data_portfolio.stg_employee_hierarchy' to be skipped because of status 'error'.  Reason: Database Error in model stg_employee_hierarchy (models/intermediate/stg_employee_hierarchy.sql)
+  Syntax error: Unexpected ";" at [50:35]
+  compiled code at target/run/data_portfolio/models/intermediate/stg_employee_hierarchy.sql.
+[0m22:32:19.424688 [error] [Thread-3 (]: 3 of 3 ERROR creating sql view model chinook_raw.stg_support_workload .......... [[31mERROR[0m in 0.43s]
+[0m22:32:19.428013 [debug] [Thread-3 (]: Finished running node model.data_portfolio.stg_support_workload
+[0m22:32:19.428436 [debug] [Thread-7 (]: Marking all children of 'model.data_portfolio.stg_support_workload' to be skipped because of status 'error'.  Reason: Database Error in model stg_support_workload (models/intermediate/stg_support_workload.sql)
+  Syntax error: Unexpected ";" at [31:5]
+  compiled code at target/run/data_portfolio/models/intermediate/stg_support_workload.sql.
+[0m22:32:19.711045 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_portfolio.dim_support_capacity_performance"
+[0m22:32:19.712386 [debug] [Thread-1 (]: On model.data_portfolio.dim_support_capacity_performance: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "data_portfolio", "target_name": "dev", "node_id": "model.data_portfolio.dim_support_capacity_performance"} */
+
+  
+    
+
+    create or replace table `jlhoughton-dev`.`chinook_raw`.`dim_support_capacity_performance`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- models/domain/dim_support_capacity_performance.sql
+-- Consolidates employee hierarchy, account workloads, and revenue performance for Looker Studio
+
+WITH employee_base AS (
+  SELECT 
+    eb.employee_id,
+    eb.employee_full_name,
+    eb.job_title,
+    eb.manager_full_name,
+    eb.tenure_years
+  FROM 
+    `jlhoughton-dev.chinook_raw.stg_employee_hierarchy` AS eb
+),
+
+workload_base AS (
+  SELECT 
+    wb.employee_id,
+    wb.total_assigned_customers,
+    wb.countries_covered
+  FROM 
+    `jlhoughton-dev.chinook_raw.stg_support_workload` AS wb
+),
+
+revenue_base AS (
+  SELECT
+    c.SupportRepId AS employee_id,
+    COUNT(DISTINCT i.InvoiceId) AS total_orders_handled,
+    ROUND(SUM(i.Total), 2) AS total_portfolio_revenue,
+    ROUND(AVG(i.Total), 2) AS average_order_value
+  FROM
+    `jlhoughton-dev.chinook_raw.invoices` AS i
+  JOIN
+    `jlhoughton-dev.chinook_raw.customers` AS c
+  ON
+    i.CustomerId = c.CustomerId
+  GROUP BY
+    1
+)
+
+SELECT
+  emp.employee_id,
+  emp.employee_full_name,
+  emp.job_title,
+  emp.manager_full_name,
+  emp.tenure_years,
+  COALESCE(work.total_assigned_customers, 0) AS total_assigned_customers,
+  COALESCE(work.countries_covered, 0) AS countries_covered,
+  COALESCE(rev.total_orders_handled, 0) AS total_orders_handled,
+  COALESCE(rev.total_portfolio_revenue, 0.0) AS total_portfolio_revenue,
+  COALESCE(rev.average_order_value, 0.0) AS average_order_value,
+  -- Calculate average revenue generated per assigned customer account
+  SAFE_DIVIDE(rev.total_portfolio_revenue, work.total_assigned_customers) AS revenue_per_account
+FROM
+  employee_base AS emp
+LEFT JOIN
+  workload_base AS work
+ON
+  emp.employee_id = work.employee_id
+LEFT JOIN
+  revenue_base AS rev
+ON
+  emp.employee_id = rev.employee_id
+WHERE
+  -- Filter specifically for operational sales support roles
+  emp.job_title LIKE '%Sales%Support%';
+    );
+  
+[0m22:32:19.929395 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:5d8acaaf-2024-40ba-9189-6e6d6f288203&page=queryresults
+[0m22:32:19.930152 [error] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:5d8acaaf-2024-40ba-9189-6e6d6f288203&page=queryresults
+[0m22:32:19.936908 [debug] [Thread-1 (]: Database Error in model dim_support_capacity_performance (models/domain/dim_support_capacity_performance.sql)
+  Syntax error: Expected ")" but got ";" at [78:39]
+  compiled code at target/run/data_portfolio/models/domain/dim_support_capacity_performance.sql
+[0m22:32:19.937618 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '3334acaf-36d7-48eb-8b60-d23c47b2db37', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x119398cd0>]}
+[0m22:32:19.938409 [error] [Thread-1 (]: 1 of 3 ERROR creating sql table model chinook_raw.dim_support_capacity_performance  [[31mERROR[0m in 0.94s]
+[0m22:32:19.939057 [debug] [Thread-1 (]: Finished running node model.data_portfolio.dim_support_capacity_performance
+[0m22:32:19.939628 [debug] [Thread-7 (]: Marking all children of 'model.data_portfolio.dim_support_capacity_performance' to be skipped because of status 'error'.  Reason: Database Error in model dim_support_capacity_performance (models/domain/dim_support_capacity_performance.sql)
+  Syntax error: Expected ")" but got ";" at [78:39]
+  compiled code at target/run/data_portfolio/models/domain/dim_support_capacity_performance.sql.
+[0m22:32:19.941038 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:32:19.941739 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:32:19.942538 [debug] [MainThread]: Connection 'model.data_portfolio.dim_support_capacity_performance' was properly closed.
+[0m22:32:19.942980 [debug] [MainThread]: Connection 'model.data_portfolio.stg_employee_hierarchy' was properly closed.
+[0m22:32:19.943333 [debug] [MainThread]: Connection 'model.data_portfolio.stg_support_workload' was properly closed.
+[0m22:32:19.943730 [info ] [MainThread]: 
+[0m22:32:19.944141 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 2.88 seconds (2.88s).
+[0m22:32:19.945127 [debug] [MainThread]: Command end result
+[0m22:32:19.989010 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/manifest.json
+[0m22:32:19.993910 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/semantic_manifest.json
+[0m22:32:19.995996 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/osi_document.json
+[0m22:32:20.003999 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/run_results.json
+[0m22:32:20.004415 [info ] [MainThread]: 
+[0m22:32:20.004769 [info ] [MainThread]: [31mCompleted with 3 errors, 0 partial successes, and 0 warnings:[0m
+[0m22:32:20.005039 [info ] [MainThread]: 
+[0m22:32:20.005369 [error] [MainThread]: [[31mERROR[0m]: in model stg_employee_hierarchy (models/intermediate/stg_employee_hierarchy.sql)
+[0m22:32:20.005681 [error] [MainThread]:   Database Error in model stg_employee_hierarchy (models/intermediate/stg_employee_hierarchy.sql)
+  Syntax error: Unexpected ";" at [50:35]
+  compiled code at target/run/data_portfolio/models/intermediate/stg_employee_hierarchy.sql
+[0m22:32:20.005912 [info ] [MainThread]: 
+[0m22:32:20.006209 [info ] [MainThread]:   compiled code at target/compiled/data_portfolio/models/intermediate/stg_employee_hierarchy.sql
+[0m22:32:20.006458 [info ] [MainThread]: 
+[0m22:32:20.006738 [error] [MainThread]: [[31mERROR[0m]: in model stg_support_workload (models/intermediate/stg_support_workload.sql)
+[0m22:32:20.007027 [error] [MainThread]:   Database Error in model stg_support_workload (models/intermediate/stg_support_workload.sql)
+  Syntax error: Unexpected ";" at [31:5]
+  compiled code at target/run/data_portfolio/models/intermediate/stg_support_workload.sql
+[0m22:32:20.007251 [info ] [MainThread]: 
+[0m22:32:20.007521 [info ] [MainThread]:   compiled code at target/compiled/data_portfolio/models/intermediate/stg_support_workload.sql
+[0m22:32:20.007740 [info ] [MainThread]: 
+[0m22:32:20.008013 [error] [MainThread]: [[31mERROR[0m]: in model dim_support_capacity_performance (models/domain/dim_support_capacity_performance.sql)
+[0m22:32:20.008293 [error] [MainThread]:   Database Error in model dim_support_capacity_performance (models/domain/dim_support_capacity_performance.sql)
+  Syntax error: Expected ")" but got ";" at [78:39]
+  compiled code at target/run/data_portfolio/models/domain/dim_support_capacity_performance.sql
+[0m22:32:20.008528 [info ] [MainThread]: 
+[0m22:32:20.009076 [info ] [MainThread]:   compiled code at target/compiled/data_portfolio/models/domain/dim_support_capacity_performance.sql
+[0m22:32:20.009730 [info ] [MainThread]: 
+[0m22:32:20.010152 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=3 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m22:32:20.017041 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 5.3112497, "process_in_blocks": "0", "process_kernel_time": 0.723811, "process_mem_max_rss": "259964928", "process_out_blocks": "0", "process_user_time": 4.059479}
+[0m22:32:20.018058 [debug] [MainThread]: Command `dbt run` failed at 22:32:20.017938 after 5.31 seconds
+[0m22:32:20.018935 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x118dbc450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109d51950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b22b700>]}
+[0m22:32:20.019268 [debug] [MainThread]: Flushing usage events
+[0m22:32:20.424160 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:38:19.001110 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db85400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f32f110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f32f9d0>]}
+
+
+============================== 22:38:19.007291 | 0bfacd30-2e01-4cb7-aa78-91312da41557 ==============================
+[0m22:38:19.007291 [info ] [MainThread]: Running with dbt=1.12.4
+[0m22:38:19.007759 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'log_format': 'default', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'no_print': 'None', 'target_path': 'None', 'use_colors': 'True', 'log_cache_events': 'False', 'invocation_command': 'dbt run --select stg_employee_hierarchy stg_support_workload dim_support_capacity_performance', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'introspect': 'True', 'quiet': 'False', 'static_parser': 'True', 'debug': 'False', 'log_path': '/Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/logs', 'maximum_seed_size_mib': '1', 'profiles_dir': '/Users/jlhoughton/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'write_json': 'True'}
+[0m22:38:20.435226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cd510f0>]}
+[0m22:38:20.495177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be37df0>]}
+[0m22:38:20.496081 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m22:38:20.641342 [debug] [MainThread]: checksum: 58bdd5699549d142caac3b1b885f78dbe91a8ca8f161d75e4c2bbdd5975993de, vars: {}, profile: data_portfolio, target: dev, version: 1.12.4
+[0m22:38:20.799800 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 3 files changed.
+[0m22:38:20.800366 [debug] [MainThread]: Partial parsing: updated file: data_portfolio://models/domain/dim_support_capacity_performance.sql
+[0m22:38:20.800662 [debug] [MainThread]: Partial parsing: updated file: data_portfolio://models/intermediate/stg_support_workload.sql
+[0m22:38:20.800925 [debug] [MainThread]: Partial parsing: updated file: data_portfolio://models/intermediate/stg_employee_hierarchy.sql
+[0m22:38:21.357049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d33ab50>]}
+[0m22:38:21.478476 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/manifest.json
+[0m22:38:21.482410 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/semantic_manifest.json
+[0m22:38:21.504234 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/osi_document.json
+[0m22:38:21.517622 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1204624e0>]}
+[0m22:38:21.518158 [info ] [MainThread]: Found 3 models, 4 data tests, 11 sources, 561 macros
+[0m22:38:21.518484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1203ef690>]}
+[0m22:38:21.520351 [info ] [MainThread]: 
+[0m22:38:21.520820 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:38:21.521125 [info ] [MainThread]: 
+[0m22:38:21.521804 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:38:21.525222 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_jlhoughton-dev'
+[0m22:38:21.525639 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:38:22.827385 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_jlhoughton-dev, now list_jlhoughton-dev_chinook_raw)
+[0m22:38:22.828305 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:38:23.328313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d5229c0>]}
+[0m22:38:23.333560 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:38:23.342083 [debug] [Thread-2 (]: Began running node model.data_portfolio.stg_employee_hierarchy
+[0m22:38:23.342784 [debug] [Thread-1 (]: Began running node model.data_portfolio.dim_support_capacity_performance
+[0m22:38:23.343195 [debug] [Thread-3 (]: Began running node model.data_portfolio.stg_support_workload
+[0m22:38:23.343968 [info ] [Thread-2 (]: 2 of 3 START sql view model chinook_raw.stg_employee_hierarchy ................. [RUN]
+[0m22:38:23.345738 [debug] [Thread-2 (]: Acquiring new bigquery connection 'model.data_portfolio.stg_employee_hierarchy'
+[0m22:38:23.346551 [debug] [Thread-2 (]: Began compiling node model.data_portfolio.stg_employee_hierarchy
+[0m22:38:23.344556 [info ] [Thread-1 (]: 1 of 3 START sql table model chinook_raw.dim_support_capacity_performance ...... [RUN]
+[0m22:38:23.367398 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_jlhoughton-dev_chinook_raw, now model.data_portfolio.dim_support_capacity_performance)
+[0m22:38:23.345098 [info ] [Thread-3 (]: 3 of 3 START sql view model chinook_raw.stg_support_workload ................... [RUN]
+[0m22:38:23.380386 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.data_portfolio.stg_support_workload'
+[0m22:38:23.379518 [debug] [Thread-1 (]: Began compiling node model.data_portfolio.dim_support_capacity_performance
+[0m22:38:23.378935 [debug] [Thread-2 (]: Writing injected SQL for node "model.data_portfolio.stg_employee_hierarchy"
+[0m22:38:23.381306 [debug] [Thread-3 (]: Began compiling node model.data_portfolio.stg_support_workload
+[0m22:38:23.383725 [debug] [Thread-1 (]: Writing injected SQL for node "model.data_portfolio.dim_support_capacity_performance"
+[0m22:38:23.423506 [debug] [Thread-3 (]: Writing injected SQL for node "model.data_portfolio.stg_support_workload"
+[0m22:38:23.432355 [debug] [Thread-2 (]: Began executing node model.data_portfolio.stg_employee_hierarchy
+[0m22:38:23.460226 [debug] [Thread-3 (]: Began executing node model.data_portfolio.stg_support_workload
+[0m22:38:23.474177 [debug] [Thread-1 (]: Began executing node model.data_portfolio.dim_support_capacity_performance
+[0m22:38:23.506304 [debug] [Thread-3 (]: Writing runtime sql for node "model.data_portfolio.stg_support_workload"
+[0m22:38:23.525882 [debug] [Thread-2 (]: Writing runtime sql for node "model.data_portfolio.stg_employee_hierarchy"
+[0m22:38:23.548791 [debug] [Thread-3 (]: On model.data_portfolio.stg_support_workload: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "data_portfolio", "target_name": "dev", "node_id": "model.data_portfolio.stg_support_workload"} */
+
+
+  create or replace view `jlhoughton-dev`.`chinook_raw`.`stg_support_workload`
+  OPTIONS()
+  as -- models/intermediate/stg_support_workload.sql
+-- Aggregates customer portfolio distribution per sales support representative
+
+WITH raw_customers AS (
+  SELECT
+    CAST(CustomerId AS INT64) AS customer_id,
+    CONCAT(FirstName, ' ', LastName) AS customer_full_name,
+    Company AS company,
+    Country AS customer_country,
+    CAST(SupportRepId AS INT64) AS support_rep_id
+  FROM
+    `jlhoughton-dev.chinook_raw.customers`
+)
+
+SELECT
+  c.support_rep_id AS employee_id,
+  COUNT(DISTINCT c.customer_id) AS total_assigned_customers,
+  COUNT(DISTINCT c.customer_country) AS countries_covered,
+  COUNTIF(c.customer_country != 'USA') AS international_customer_count
+FROM raw_customers AS c
+WHERE c.support_rep_id IS NOT NULL
+GROUP BY 1;
+
+
+[0m22:38:23.549588 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:38:23.559235 [debug] [Thread-1 (]: Writing runtime sql for node "model.data_portfolio.dim_support_capacity_performance"
+[0m22:38:23.559848 [debug] [Thread-2 (]: On model.data_portfolio.stg_employee_hierarchy: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "data_portfolio", "target_name": "dev", "node_id": "model.data_portfolio.stg_employee_hierarchy"} */
+
+
+  create or replace view `jlhoughton-dev`.`chinook_raw`.`stg_employee_hierarchy`
+  OPTIONS()
+  as -- models/intermediate/stg_employee_hierarchy.sql
+-- Cleans employee details and resolves management hierarchy reporting lines
+
+WITH raw_employees AS (
+  SELECT
+    CAST(EmployeeId AS INT64) AS employee_id,
+    CAST(ReportsTo AS INT64) AS reports_to_id,
+    FirstName AS first_name,
+    LastName AS last_name,
+    CONCAT(FirstName, ' ', LastName) AS employee_full_name,
+    Title AS job_title,
+    CAST(HireDate AS DATE) AS hire_date,
+    Address AS address,
+    City AS city,
+    State AS state,
+    Country AS country,
+    PostalCode AS postal_code,
+    Phone AS phone,
+    Fax AS fax,
+    Email AS email
+  FROM
+    `jlhoughton-dev.chinook_raw.employees`
+)
+
+SELECT
+  e.employee_id,
+  e.employee_full_name,
+  e.job_title,
+  e.reports_to_id,
+  m.employee_full_name AS manager_full_name,
+  m.job_title AS manager_job_title,
+  e.hire_date,
+  DATE_DIFF(CURRENT_DATE(), e.hire_date, YEAR) AS tenure_years,
+  e.city,
+  e.state,
+  e.country,
+  e.email
+FROM raw_employees AS e
+LEFT JOIN raw_employees AS m
+  ON e.reports_to_id = m.employee_id;
+
+
+[0m22:38:23.561009 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:38:23.568243 [debug] [Thread-1 (]: On model.data_portfolio.dim_support_capacity_performance: /* {"app": "dbt", "dbt_version": "1.12.4", "profile_name": "data_portfolio", "target_name": "dev", "node_id": "model.data_portfolio.dim_support_capacity_performance"} */
+
+  
+    
+
+    create or replace table `jlhoughton-dev`.`chinook_raw`.`dim_support_capacity_performance`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- models/domain/dim_support_capacity_performance.sql
+-- Consolidates employee hierarchy, account workloads, and revenue performance for Looker Studio
+
+WITH employee_base AS (
+  SELECT
+    CAST(employee_id AS INT64) AS employee_id,
+    employee_full_name,
+    job_title,
+    manager_full_name,
+    tenure_years
+  FROM `jlhoughton-dev.chinook_raw.stg_employee_hierarchy`
+),
+
+workload_base AS (
+  SELECT
+    CAST(employee_id AS INT64) AS employee_id,
+    total_assigned_customers,
+    countries_covered
+  FROM `jlhoughton-dev.chinook_raw.stg_support_workload`
+),
+
+revenue_base AS (
+  SELECT
+    CAST(c.SupportRepId AS INT64) AS employee_id,
+    COUNT(DISTINCT i.InvoiceId) AS total_orders_handled,
+    ROUND(SUM(i.Total), 2) AS total_portfolio_revenue,
+    ROUND(AVG(i.Total), 2) AS average_order_value
+  FROM `jlhoughton-dev.chinook_raw.invoices` AS i
+  JOIN `jlhoughton-dev.chinook_raw.customers` AS c
+    ON i.CustomerId = c.CustomerId
+  GROUP BY 1
+)
+
+SELECT
+  emp.employee_id,
+  emp.employee_full_name,
+  emp.job_title,
+  emp.manager_full_name,
+  emp.tenure_years,
+  COALESCE(work.total_assigned_customers, 0) AS total_assigned_customers,
+  COALESCE(work.countries_covered, 0) AS countries_covered,
+  COALESCE(rev.total_orders_handled, 0) AS total_orders_handled,
+  COALESCE(rev.total_portfolio_revenue, 0.0) AS total_portfolio_revenue,
+  COALESCE(rev.average_order_value, 0.0) AS average_order_value,
+  SAFE_DIVIDE(rev.total_portfolio_revenue, work.total_assigned_customers) AS revenue_per_account
+FROM employee_base AS emp
+LEFT JOIN workload_base AS work
+  ON emp.employee_id = work.employee_id
+LEFT JOIN revenue_base AS rev
+  ON emp.employee_id = rev.employee_id
+WHERE emp.job_title LIKE '%Sales%Support%'
+    );
+  
+[0m22:38:23.569200 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:38:24.211681 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:17c2d249-d98b-4ccc-af64-d3c6cbf09b59&page=queryresults
+[0m22:38:24.328553 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:0725a730-1c2c-48f5-bd2e-66dc19197f09&page=queryresults
+[0m22:38:24.407449 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=jlhoughton-dev&j=bq:US:6eac56ac-f01a-4514-8e07-c1c2220339c9&page=queryresults
+[0m22:38:24.908990 [debug] [Thread-3 (]: SQL status: OK in 0.500 seconds
+[0m22:38:24.987541 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12048ba10>]}
+[0m22:38:24.988167 [info ] [Thread-3 (]: 3 of 3 OK created sql view model chinook_raw.stg_support_workload .............. [[32mCREATE VIEW (0 processed)[0m in 1.61s]
+[0m22:38:24.988857 [debug] [Thread-3 (]: Finished running node model.data_portfolio.stg_support_workload
+[0m22:38:25.260868 [debug] [Thread-2 (]: SQL status: OK in 1.048 seconds
+[0m22:38:25.265884 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12040e360>]}
+[0m22:38:25.267025 [info ] [Thread-2 (]: 2 of 3 OK created sql view model chinook_raw.stg_employee_hierarchy ............ [[32mCREATE VIEW (0 processed)[0m in 1.92s]
+[0m22:38:25.267747 [debug] [Thread-2 (]: Finished running node model.data_portfolio.stg_employee_hierarchy
+[0m22:38:26.739538 [debug] [Thread-1 (]: SQL status: OK in 2.410 seconds
+[0m22:38:26.914861 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '0bfacd30-2e01-4cb7-aa78-91312da41557', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1204bc370>]}
+[0m22:38:26.915564 [info ] [Thread-1 (]: 1 of 3 OK created sql table model chinook_raw.dim_support_capacity_performance . [[32mCREATE TABLE (3.0 rows, 11.5 KiB processed)[0m in 3.55s]
+[0m22:38:26.916319 [debug] [Thread-1 (]: Finished running node model.data_portfolio.dim_support_capacity_performance
+[0m22:38:26.917935 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:38:26.918858 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:38:26.919213 [debug] [MainThread]: Connection 'model.data_portfolio.dim_support_capacity_performance' was properly closed.
+[0m22:38:26.919505 [debug] [MainThread]: Connection 'model.data_portfolio.stg_employee_hierarchy' was properly closed.
+[0m22:38:26.919785 [debug] [MainThread]: Connection 'model.data_portfolio.stg_support_workload' was properly closed.
+[0m22:38:26.920207 [info ] [MainThread]: 
+[0m22:38:26.920710 [info ] [MainThread]: Finished running 1 table model, 2 view models in 0 hours 0 minutes and 5.40 seconds (5.40s).
+[0m22:38:26.922155 [debug] [MainThread]: Command end result
+[0m22:38:26.974078 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/manifest.json
+[0m22:38:26.978301 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/semantic_manifest.json
+[0m22:38:26.981493 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/osi_document.json
+[0m22:38:26.989266 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/jlhoughton/Desktop/jlhoughton-dev/data-portfolio/target/run_results.json
+[0m22:38:26.989626 [info ] [MainThread]: 
+[0m22:38:26.989976 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:38:26.990282 [info ] [MainThread]: 
+[0m22:38:26.991312 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m22:38:26.997355 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 8.1042795, "process_in_blocks": "0", "process_kernel_time": 0.730394, "process_mem_max_rss": "261685248", "process_out_blocks": "0", "process_user_time": 4.292295}
+[0m22:38:26.998585 [debug] [MainThread]: Command `dbt run` succeeded at 22:38:26.998461 after 8.11 seconds
+[0m22:38:26.999091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de8d950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de8c750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f36b700>]}
+[0m22:38:26.999481 [debug] [MainThread]: Flushing usage events
+[0m22:38:27.405309 [debug] [MainThread]: An error was encountered while trying to flush usage events

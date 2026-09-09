@@ -1,4 +1,8 @@
--- models/intermediate/stg_employee_hierarchy.sql
+
+
+  create or replace view `jlhoughton-dev`.`chinook_raw`.`stg_employee_hierarchy`
+  OPTIONS()
+  as -- models/intermediate/stg_employee_hierarchy.sql
 -- Cleans employee details and resolves management hierarchy reporting lines
 
 WITH raw_employees AS (
@@ -37,4 +41,5 @@ SELECT
   e.email
 FROM raw_employees AS e
 LEFT JOIN raw_employees AS m
-  ON e.reports_to_id = m.employee_id
+  ON e.reports_to_id = m.employee_id;
+

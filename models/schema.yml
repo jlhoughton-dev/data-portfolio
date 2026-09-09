@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_employee_hierarchy
+    description: Employee hierarchy and reporting structure cleaned for workforce analysis.
+    columns:
+      - name: employee_id
+        description: Unique employee identifier.
+        tests:
+          - unique
+          - not_null
+      - name: employee_full_name
+        description: Employee full name.
+      - name: reports_to_id
+        description: Manager employee identifier.
+
+  - name: stg_support_workload
+    description: Support workload summarised by employee.
+    columns:
+      - name: employee_id
+        description: Support representative identifier.
+        tests:
+          - not_null
+      - name: total_assigned_customers
+        description: Count of customers assigned to the employee.
+
+  - name: dim_support_capacity_performance
+    description: Composite workforce performance model combining hierarchy, workload, and revenue signals.
+    columns:
+      - name: employee_id
+        description: Employee identifier in the domain model.
+        tests:
+          - not_null
+      - name: total_portfolio_revenue
+        description: Total revenue attributed to the employee portfolio.

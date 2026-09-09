@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: chinook_raw
+    database: jlhoughton-dev
+    schema: chinook_raw
+    description: Raw Chinook source tables from Google BigQuery.
+    tables:
+      - name: albums
+      - name: artists
+      - name: customers
+      - name: employees
+      - name: genres
+      - name: invoiceitems
+      - name: invoices
+      - name: mediatypes
+      - name: playlists
+      - name: playlisttrack
+      - name: tracks

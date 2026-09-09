@@ -10,6 +10,33 @@ I connect frontline operations to executive strategy through better data, strong
 
 ---
 
+## 🆕 New: dbt + BigQuery Modeling Added
+
+*Updated: 2026-09-08*
+
+I recently added a lightweight dbt project to this repository to formalize the data transformation layer for the Chinook datasets in BigQuery.
+
+This is a meaningful step up from ad hoc SQL because it introduces a reusable, version-controlled modeling workflow with layered transformations, source definitions, and testable logic.
+
+### Why this matters
+
+- **Production-style workflow:** raw tables in BigQuery are transformed through staged, documented SQL models
+- **Better portfolio value:** it demonstrates modern warehouse modeling skills, not just one-off queries
+- **Repeatability:** the project can be rerun and validated consistently over time
+- **Recruiter-friendly proof:** it shows I can work with modern data tools and structure analytics work like a real data team
+
+### Included in this addition
+
+- dbt project configuration and setup
+- source declarations for the raw BigQuery tables
+- a layered modeling structure for staging and domain logic
+- initial models for employee hierarchy, support workload, and capacity performance
+- basic validation tests to check data quality assumptions
+
+This gives the repo a real data engineering foundation behind the reporting work and helps connect the raw data to the business story in a clean, explainable way.
+
+---
+
 ## Case Studies
 
 - [Data Pipelines & SQL Models](docs/data-pipelines-and-sql-models.mdx)  

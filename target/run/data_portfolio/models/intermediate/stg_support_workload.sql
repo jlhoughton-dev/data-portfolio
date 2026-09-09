@@ -1,4 +1,8 @@
--- models/intermediate/stg_support_workload.sql
+
+
+  create or replace view `jlhoughton-dev`.`chinook_raw`.`stg_support_workload`
+  OPTIONS()
+  as -- models/intermediate/stg_support_workload.sql
 -- Aggregates customer portfolio distribution per sales support representative
 
 WITH raw_customers AS (
@@ -19,4 +23,5 @@ SELECT
   COUNTIF(c.customer_country != 'USA') AS international_customer_count
 FROM raw_customers AS c
 WHERE c.support_rep_id IS NOT NULL
-GROUP BY 1
+GROUP BY 1;
+

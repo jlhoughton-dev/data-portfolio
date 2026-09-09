@@ -1,4 +1,16 @@
--- models/domain/dim_support_capacity_performance.sql
+
+  
+    
+
+    create or replace table `jlhoughton-dev`.`chinook_raw`.`dim_support_capacity_performance`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      -- models/domain/dim_support_capacity_performance.sql
 -- Consolidates employee hierarchy, account workloads, and revenue performance for Looker Studio
 
 WITH employee_base AS (
@@ -49,3 +61,5 @@ LEFT JOIN workload_base AS work
 LEFT JOIN revenue_base AS rev
   ON emp.employee_id = rev.employee_id
 WHERE emp.job_title LIKE '%Sales%Support%'
+    );
+  
