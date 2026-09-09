@@ -23,7 +23,6 @@ const sidebars = {
       label: 'Case Studies',
       items: [
         'data-pipelines-and-sql-models',
-        'workforce-intelligence',
         'executive-reporting',
         'behind-the-work',
       ],
