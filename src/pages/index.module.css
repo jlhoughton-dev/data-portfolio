@@ -241,9 +241,75 @@
   margin: 0;
 }
 
+.featureSpotlight {
+  margin: 2rem auto 1.25rem;
+  max-width: 760px;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.92), rgba(248, 250, 252, 0.9));
+  box-shadow: 0 10px 25px -18px rgba(37, 99, 235, 0.45);
+  text-align: center;
+}
+
+.featureBadgeWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.8rem;
+}
+
+.featureBadge {
+  display: inline-block;
+  padding: 0.35rem 0.7rem;
+  border-radius: 9999px;
+  background: rgba(153, 27, 27, 0.08);
+  color: #991b1b;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.featureDate {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.featureTitle {
+  margin: 0 0 0.6rem;
+  color: var(--ifm-heading-color);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: 700;
+}
+
+.featureSummary {
+  margin: 0 auto 1rem;
+  max-width: 620px;
+  color: var(--ifm-text-color);
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.featureLink {
+  display: inline-block;
+  color: var(--ifm-color-primary-darker);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.featureLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+}
+
 .behindWorkLink {
   display: block;
-  margin: 2rem auto 0;
+  margin: 1.5rem auto 0;
   padding: 1.5rem 1.25rem;
   border: 1px solid #dbeafe;
   border-radius: 1rem;

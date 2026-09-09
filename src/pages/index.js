@@ -23,6 +23,21 @@ export default function Home() {
           <p className={styles.heroContext}>
             This site is a way to make my skills and working approach visible. Much of my previous work was created in internal systems and cannot be shared as a traditional portfolio, so I built these projects to create concrete artifacts that demonstrate how I think, model data, and communicate insights.
           </p>
+
+          <div className={styles.featureSpotlight}>
+            <div className={styles.featureBadgeWrap}>
+              <span className={styles.featureBadge}>NEW</span>
+              <span className={styles.featureDate}>Updated Sept 8, 2026</span>
+            </div>
+            <h3 className={styles.featureTitle}>dbt + BigQuery is now part of the portfolio</h3>
+            <p className={styles.featureSummary}>
+              I recently added a lightweight dbt workflow to model raw Chinook data into cleaner, testable layers for workforce and operational analysis.
+            </p>
+            <Link className={styles.featureLink} to="/docs/dbt-bigquery-setup">
+              Explore the dbt setup <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
           <Link className={styles.behindWorkLink} to="/docs/behind-the-work">
             <span className={styles.behindWorkEyebrow}>Curious how this came together?</span>
             <span className={styles.behindWorkTitle}>How I Built This <span aria-hidden="true">→</span></span>

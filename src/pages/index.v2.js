@@ -19,6 +19,21 @@ export default function Home() {
             operations, workforce intelligence, and data architecture—turning raw operational data into
             insight that drives action.
           </p>
+
+          <div className={styles.featureSpotlight}>
+            <div className={styles.featureBadgeWrap}>
+              <span className={styles.featureBadge}>NEW!</span>
+              <span className={styles.featureDate}>Updated Sept 8, 2026</span>
+            </div>
+            <h3 className={styles.featureTitle}>dbt + BigQuery is now part of the portfolio</h3>
+            <p className={styles.featureSummary}>
+              I recently added a lightweight dbt workflow to model raw Chinook data into cleaner, testable layers for workforce and operational analysis.
+            </p>
+            <Link className={styles.featureLink} to="/docs/dbt-bigquery-setup">
+              Explore the dbt setup <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
           <div className={styles.heroButtons}>
             <Link className={styles.primaryButton} to="#projects">
               Explore Projects

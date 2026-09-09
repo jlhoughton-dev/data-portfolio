@@ -1,0 +1,84 @@
+# 🧱 dbt + BigQuery Setup
+
+<div className="workforceHero">
+	<div className="workforceBadge">Modern warehouse modeling</div>
+	<div className="workforceDivider" />
+	<div className="workforceLead">
+		I added a lightweight dbt project to this repository to bring more structure, repeatability, and credibility to the BigQuery analytics layer behind the portfolio.
+	</div>
+</div>
+
+<div className="workforceSectionCard">
+
+## 💡 Why I added dbt
+
+The raw BigQuery tables were already useful, but they were still just source tables. I wanted the repository to show a more mature data workflow: one that turns raw data into well-defined, documented, and testable models.
+
+This felt like the right next step because dbt is one of the clearest ways to show the difference between a warehouse with data and a warehouse with modeled, reusable analytics.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## 🛠️ What I set up
+
+I created a minimal dbt project that connects to the BigQuery environment and organizes the logic into a clean model structure.
+
+This includes:
+
+- a dbt project configuration
+- source definitions for the Chinook tables in BigQuery
+- staged models for cleaned employee and workload data
+- a domain-level model that combines hierarchy, workload, and performance logic
+- basic data tests for assumptions like uniqueness and non-null values
+
+This gives the repo a more production-style foundation instead of a collection of one-off SQL queries.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## 📈 Why it matters for this portfolio
+
+Adding dbt makes the data story stronger in a way that is easy to understand from a portfolio perspective.
+
+It shows that I can:
+
+- work with cloud data warehouse tooling
+- build reusable transformation layers
+- structure models in a way that is easier to test and maintain
+- communicate the logic behind the business insights more clearly
+
+It also makes the repository feel more complete. Instead of just showing raw tables and reporting outputs, it shows the modeling layer that connects the source data to the final analysis.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## 🔗 How it fits into the rest of the project
+
+This dbt setup is not a separate side project — it is part of the same data story as the rest of the portfolio.
+
+The flow is straightforward:
+
+- raw relational data is loaded into BigQuery
+- dbt models clean and structure that data
+- the modeled output supports workforce and operational analysis
+- the resulting insights can be used in reporting and executive storytelling
+
+That gives the repo a cleaner narrative: from data ingestion to transformation to business-facing understanding.
+
+</div>
+
+<div className="workforceSectionCard">
+
+## ⚙️ Tools in use
+
+- dbt Core
+- dbt-bigquery adapter
+- Google BigQuery
+- SQL
+- GitHub
+- Data quality testing
+
+</div>
