@@ -94,4 +94,4 @@ Raw relational data → BigQuery → Layered SQL models → Domain model → Dat
 ## Connect With Me
 
 - **GitHub:** [jlhoughton-dev](https://github.com/jlhoughton-dev)
-- **LinkedIn:** [Add your LinkedIn profile link here](https://linkedin.com)
+- **LinkedIn:** [LinkedIn Profile](https://linkedin.com)
