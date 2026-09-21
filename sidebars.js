@@ -17,6 +17,7 @@
 const sidebars = {
   tutorialSidebar: [
     'intro',
+    'version-history',
     {
       type: 'category',
       label: 'Case Studies',
