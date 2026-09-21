@@ -32,6 +32,11 @@ const config = {
 
   onBrokenLinks: 'throw',
 
+  themes: ['@docusaurus/theme-mermaid'],
+  markdown: {
+    mermaid: true,
+  },
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -77,6 +82,7 @@ const config = {
         items: [
           {to: '/', label: 'Home', position: 'left'},
           {to: '/docs/intro', label: 'Portfolio Overview', position: 'left'},
+          {to: '/docs/request-vs-reality', label: 'Stakeholder Management', position: 'left'},
           {
             label: 'Case Studies',
             position: 'left',

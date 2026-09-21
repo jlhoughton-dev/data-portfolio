@@ -1,0 +1,55 @@
+---
+title: Request vs Reality
+sidebar_label: Request vs Reality
+---
+
+# Navigating Stakeholder Ambiguity
+
+When building data products or reporting frameworks, stakeholders often request metrics based on historical habits rather than underlying business needs. 
+
+This matrix outlines how I bridge the gap between ambiguous requests and actionable data solutions.
+
+## Request Triage & Decision Flow
+
+<div className="requestRealityDiagram">
+
+```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 18, 'rankSpacing': 24, 'htmlLabels': true}}}%%
+graph LR
+    classDef startNode fill:#4f46e5,stroke:#312e81,stroke-width:2px,color:#fff;
+    classDef decisionNode fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#fff;
+    classDef processNode fill:#0f172a,stroke:#334155,stroke-width:2px,color:#fff;
+    classDef outputNode fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff;
+
+    A[Incoming Stakeholder Request]:::startNode --> B{Is the request metric & scope clear?}:::decisionNode
+    
+    B -- No / Ambiguous --> C[Execute Diagnostic Probing:<br>- Uncover hidden definitions<br>- Clarify operational queues]:::processNode
+    C --> D[Identify True Business Need]:::processNode
+    
+    B -- Yes --> E[Audit Raw Data Sources & Schema]:::decisionNode
+    D --> E
+    
+    E --> F{Do raw tables have data quality gaps?}:::decisionNode
+    
+    F -- Yes / Messy --> G[Apply Transformation Layer:<br>- Standardize nulls & splits<br>- Build governance rules]:::processNode
+    F -- Clean & Reliable --> H[Draft Transformation Query & Validate Grain]:::processNode
+    
+    G --> H
+    H --> I[Deliver Actionable Data Product & Dashboard]:::outputNode
+  ```
+
+  </div>
+
+  Let's break that down into a few real-world examples of how this process works in practice.
+
+  ## The Translation & Clarification Matrix
+
+<div className="requestRealityTable">
+
+| Ambiguous Stakeholder Request | Probing & Clarifying Questions (The Diagnostic Step) | The Messy Reality (Why Raw Data Fails) | The True Underlying Need | The Solution / What Is Delivered |
+| :--- | :--- | :--- | :--- | :--- |
+| **"Can you pull a report of all support tickets where customers were frustrated last week?"** | • What specific indicators define "frustrated"—explicit escalation tags, negative CSAT ratings, or keyword triggers?<br />• Are we evaluating this across all support tiers, or targeting a specific line of business? | Sentiment flags are inconsistently applied by frontline agents, and definitions of "frustrated" vary significantly across regional and product queues. | Leadership needs visibility into operational friction points and systemic product issues causing customer escalations, not just a raw volume count. | An automated analytical data model that groups interactions by root-cause category and escalation flags, paired with an executive trend visualization. |
+| **"We need a dashboard showing exactly how many active accounts each account manager owns."** | • How are we defining "active"—a 30-day interaction window, a revenue threshold, or active ticket flow?<br />• How should the model handle parent-subsidiary organizational hierarchies or multi-branded account structures? | "Active" is loosely defined by stakeholders; dormant accounts, shared parent organizations, and multi-entity setups heavily distort raw counts. | Management requires an objective, data-driven way to measure workload balance and capacity constraints before distributing new account loads. | A weighted complexity scoring model (incorporating volume, tier value, and multi-entity flags) mapping accounts to actual operational capacity slots. |
+| **"Can you add a standard performance target for advisor satisfaction scores next quarter?"** | • Should this target adapt to different interaction types (synchronous chats vs. complex deep-dive cases), or is it a flat team-wide goal?<br />• How do we handle low-volume queues where a single outlier score heavily skews the average? | Historical baseline data is fragmented across long-format transactional tables, and unhandled interaction type splits break the mathematical baseline. | Operations requires reliable, auditable coaching targets that accurately reflect performance realities across diverse operational workflows. | A documented transformation pipeline featuring rigorous null-handling, fallback floors, and pre-computed metric splits for fair evaluation. |
+
+</div>

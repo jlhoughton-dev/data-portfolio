@@ -38,7 +38,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-..footer {
+.footer {
   background-color: #f1f5f9;
   color: #64748b;
   border-top: 1px solid #e2e8f0;
@@ -192,6 +192,31 @@
   padding-left: 1.4rem;
 }
 
+.requestRealityDiagram {
+  max-width: 880px;
+  width: 100%;
+  margin: 1.5rem auto 2rem;
+  overflow-x: auto;
+}
+
+.requestRealityDiagram .docusaurus-mermaid-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.requestRealityDiagram svg {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .requestRealityDiagram {
+    max-width: 100%;
+  }
+}
+
 .timelineBoard {
   margin: 2rem 0 2.5rem;
   padding: 2rem 1.25rem 1.25rem;
@@ -318,5 +343,35 @@
 @media (max-width: 768px) {
   .workforceSectionCard {
     padding: 1.35rem 1.15rem 1.5rem;
+  }
+}
+
+.requestRealityTable {
+  overflow-x: auto;
+}
+
+.requestRealityTable table {
+  min-width: 1400px;
+  width: 100%;
+}
+
+.requestRealityTable th,
+.requestRealityTable td {
+  min-width: 240px;
+  padding: 1rem;
+  vertical-align: top;
+  white-space: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .requestRealityTable th,
+  .requestRealityTable td {
+    padding: 0.75rem;
+    font-size: 0.9rem;
   }
 }
