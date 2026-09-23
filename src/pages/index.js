@@ -174,11 +174,11 @@ export default function Home() {
             I document the full lifecycle of the work—from raw data to modeling, reporting, and business decision support—so the technical foundation is as clear as the business outcome.
           </p>
           <div className={styles.heroButtons} style={{ justifyContent: 'center', marginTop: '1.5rem' }}>
-            <Link className={styles.primaryButton} to="/docs/intro">
+            <Link className={styles.ctaButton} to="/docs/intro">
               Read Documentation Hub
             </Link>
             <Link
-              className={styles.secondaryButton}
+              className={styles.ctaButton}
               to="https://github.com/jlhoughton-dev/data-portfolio"
               target="_blank"
               rel="noopener noreferrer"

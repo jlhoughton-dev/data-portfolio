@@ -81,8 +81,15 @@ const config = {
         },
         items: [
           {to: '/', label: 'Home', position: 'left'},
-          {to: '/docs/intro', label: 'Portfolio Overview', position: 'left'},
-          {to: '/docs/request-vs-reality', label: 'Stakeholder Management', position: 'left'},
+          {
+            label: 'Portfolio',
+            position: 'left',
+            items: [
+              {to: '/docs/intro', label: 'Overview'},
+              {to: '/docs/how-work-comes-in', label: 'Intake Flow'},
+              {to: '/docs/request-vs-reality', label: 'Request vs Reality'},
+            ],
+          },
           {
             label: 'Case Studies',
             position: 'left',
@@ -90,6 +97,15 @@ const config = {
               {to: '/docs/data-pipelines-and-sql-models', label: 'Data Pipelines & SQL Models'},
               {to: '/docs/workforce-intelligence', label: 'Workforce Intelligence'},
               {to: '/docs/executive-reporting', label: 'Executive Reporting'},
+            ],
+          },
+          {
+            label: 'Technical Foundations',
+            position: 'left',
+            items: [
+              {to: '/docs/dbt-bigquery-setup', label: 'dbt + BigQuery'},
+              {to: '/docs/behind-the-work', label: 'Behind the Work'},
+              {to: '/docs/version-history', label: 'Version History'},
             ],
           },
           {

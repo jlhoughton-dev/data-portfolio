@@ -10,6 +10,23 @@ I connect frontline operations to executive strategy through better data, strong
 
 ---
 
+## 🆕 New: Stakeholder Management Framework Added
+
+*Updated: 2026-09-21*
+
+The repository now includes a practical framework for translating ambiguous stakeholder requests into clear business needs, reliable data models, and useful decisions.
+
+The framework demonstrates:
+
+- diagnostic questions for clarifying metrics, scope, and operational context
+- a request-triage flow from stakeholder ambiguity to an actionable data product
+- examples of how inconsistent definitions and data-quality gaps affect reporting
+- solution patterns for building auditable, decision-ready analytical models
+
+See [Request vs Reality](docs/request-vs-reality.mdx) for the full framework.
+
+---
+
 ## 🆕 New: dbt + BigQuery Modeling Added
 
 *Updated: 2026-09-08*

@@ -71,6 +71,334 @@
   color: var(--ifm-color-primary);
 }
 
+.intakeTabs {
+  margin: 2rem 0 3rem;
+  padding: 1.25rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.85rem;
+  background: #f8fbff;
+  text-align: left;
+}
+
+.intakeTabs .tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding: 0.35rem;
+  border: 0;
+}
+
+.intakeTabs .tabs__item {
+  min-width: 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.45rem;
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.intakeTabs .tabs__item:hover {
+  border-color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-primary-dark);
+}
+
+.intakeTabs .tabs__item--active {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: #ffffff;
+}
+
+.intakeTabs .tabs__content,
+.intakeTabs .margin-top--md > [role='tabpanel'] {
+  padding: 1.75rem 2rem;
+  border: 1px solid #bfdbfe;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  box-shadow: 0 10px 28px -24px rgba(30, 64, 175, 0.6);
+  text-align: center;
+}
+
+.intakeTabs .tabs__content h3,
+.intakeTabs .tabs__content p,
+.intakeTabs .tabs__content strong,
+.intakeTabs .margin-top--md > [role='tabpanel'] h3,
+.intakeTabs .margin-top--md > [role='tabpanel'] p,
+.intakeTabs .margin-top--md > [role='tabpanel'] strong {
+  text-align: center;
+}
+
+.intakeTabs .tabs__content blockquote {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: #eff6ff;
+  color: #1e3a8a;
+}
+
+.intakeTabs .margin-top--md > [role='tabpanel'] blockquote {
+  margin: 1rem auto 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: #eff6ff;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.intakeTabs .tabs__content ul {
+  display: block;
+  max-width: 44rem;
+  margin: 0 auto 1.5rem;
+  padding-left: 1.25rem;
+  text-align: left;
+}
+
+.intakeTabs .margin-top--md > [role='tabpanel'] ul {
+  display: block;
+  max-width: 44rem;
+  margin: 0 auto 1.5rem;
+  padding-left: 1.25rem;
+  text-align: left;
+}
+
+.intakeTabs .tabs__content .admonition {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.intakeTabs .margin-top--md > [role='tabpanel'] .admonition {
+  margin: 1.5rem auto;
+  text-align: left;
+}
+
+.intakeTabs .tabs__content > p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .intakeTabs .tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Container for the folder-style card */
+.folderCard {
+  position: relative;
+  background: var(--ifm-card-background-color, #ffffff);
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin-top: 1.5rem; /* Leaves room for the tab */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.folderCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
+}
+
+/* The protruding folder tab on top */
+.folderTab {
+  position: absolute;
+  top: -24px;
+  left: 20px;
+  background: var(--ifm-card-background-color, #ffffff);
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-bottom: none; /* Merges the tab seamlessly into the card border */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 4px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  letter-spacing: 0.5px;
+}
+
+.folderCard:hover .folderTab {
+  border-color: var(--ifm-color-primary);
+}
+
+.slackSimulation {
+  margin: 1.5rem 0 2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 0.75rem;
+  background: var(--ifm-background-color);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+  text-align: left;
+}
+
+.slackSimulationHeader,
+.slackSimulationMeta,
+.slackSimulationMessage,
+.slackSimulationReply {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slackSimulationHeader {
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.slackSimulationChannel {
+  color: var(--ifm-color-content);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.slackSimulationLabel,
+.slackSimulationMeta span {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.8rem;
+}
+
+.slackSimulationMessage,
+.slackSimulationReply {
+  gap: 1rem;
+}
+
+.slackSimulationReply {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--ifm-toc-border-color);
+}
+
+.slackSimulationAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+.slackSimulationAvatarIncoming {
+  background: #f1f3f5;
+}
+
+.slackSimulationAvatarReply {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.slackSimulationBody {
+  min-width: 0;
+  flex: 1;
+}
+
+.slackSimulationMeta {
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.slackSimulationText {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.slackSimulationTyping {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--ifm-background-surface-color);
+}
+
+.slackSimulationTyping span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--ifm-color-content-secondary);
+  animation: slackSimulationBlink 1.4s infinite both;
+}
+
+.slackSimulationTyping span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.slackSimulationTyping span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.slackSimulationReply ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--ifm-color-content);
+  font-size: 0.9rem;
+}
+
+.slackSimulationNote {
+  margin: 0.5rem 0 0;
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.95rem;
+}
+
+.slackSimulationFadeIn {
+  animation: slackSimulationFadeIn 0.5s ease-in-out;
+}
+
+@keyframes slackSimulationFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slackSimulationBlink {
+  0% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slackSimulationTyping span,
+  .slackSimulationFadeIn {
+    animation: none;
+  }
+}
+
+.portfolioSectionCard {
+  margin: 1.75rem 0;
+  padding: 1.75rem 2rem;
+  border: 1px solid #dbeafe;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px -20px rgba(30, 64, 175, 0.45);
+  text-align: center;
+}
+
+.portfolioSectionCard h2 {
+  margin-top: 0;
+  color: var(--ifm-heading-color);
+}
+
+.portfolioSectionCard h3 {
+  margin-top: 1.75rem;
+  color: var(--ifm-heading-color);
+}
+
+.portfolioSectionCard p:last-child {
+  margin-bottom: 0;
+}
+
 .dashboardLinkCard {
   display: flex;
   flex-direction: column;

@@ -16,8 +16,11 @@
  */
 const sidebars = {
   tutorialSidebar: [
-    'intro',
-    'version-history',
+    {
+      type: 'category',
+      label: 'Portfolio',
+      items: ['intro', 'how-work-comes-in', 'request-vs-reality'],
+    },
     {
       type: 'category',
       label: 'Case Studies',
@@ -25,8 +28,12 @@ const sidebars = {
         'data-pipelines-and-sql-models',
         'workforce-intelligence',
         'executive-reporting',
-        'behind-the-work',
       ],
+    },
+    {
+      type: 'category',
+      label: 'Technical Foundations',
+      items: ['dbt-bigquery-setup', 'version-history'],
     },
   ],
 };
