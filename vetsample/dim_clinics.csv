@@ -1,0 +1,26 @@
+clinic_id,clinic_name,tier,signup_date,mrr,dvm_seat_count,pms_connected,pms_system,is_trial_signup,trial_converted
+CL001,Clinic 1 Vet Care,Regional,2025-01-13,500,9,True,Cornerstone,True,True
+CL002,Clinic 2 Vet Care,Regional,2025-10-07,500,4,True,ezyVet,True,True
+CL003,Clinic 3 Vet Care,Solo,2025-01-14,150,3,True,Cornerstone,True,True
+CL004,Clinic 4 Vet Care,Solo,2025-05-23,150,1,True,ImproMed,True,True
+CL005,Clinic 5 Vet Care,Solo,2025-04-21,150,2,True,Cornerstone,True,True
+CL006,Clinic 6 Vet Care,Solo,2025-05-16,150,1,True,ezyVet,True,False
+CL007,Clinic 7 Vet Care,Solo,2025-10-10,150,2,True,ImproMed,True,False
+CL008,Clinic 8 Vet Care,Solo,2025-02-05,150,1,True,ezyVet,True,False
+CL009,Clinic 9 Vet Care,Regional,2025-02-21,500,7,True,Cornerstone,True,True
+CL010,Clinic 10 Vet Care,Solo,2025-04-18,150,3,True,Cornerstone,False,False
+CL011,Clinic 11 Vet Care,Regional,2025-03-29,500,8,True,ezyVet,True,True
+CL012,Clinic 12 Vet Care,Enterprise,2025-10-13,1500,17,True,ezyVet,True,False
+CL013,Clinic 13 Vet Care,Solo,2025-01-17,150,2,True,AVImark,True,False
+CL014,Clinic 14 Vet Care,Solo,2025-06-11,150,1,True,ezyVet,True,False
+CL015,Clinic 15 Vet Care,Solo,2025-05-16,150,1,True,Cornerstone,True,True
+CL016,Clinic 16 Vet Care,Solo,2025-10-26,150,2,True,AVImark,False,False
+CL017,Clinic 17 Vet Care,Solo,2025-09-10,150,1,True,ImproMed,False,False
+CL018,Clinic 18 Vet Care,Solo,2025-03-23,150,3,True,AVImark,True,True
+CL019,Clinic 19 Vet Care,Enterprise,2025-09-28,1500,18,False,None,False,False
+CL020,Clinic 20 Vet Care,Solo,2025-02-28,150,3,True,Instinct EMR,True,False
+CL021,Clinic 21 Vet Care,Solo,2025-05-31,150,2,True,Cornerstone,True,True
+CL022,Clinic 22 Vet Care,Regional,2025-09-14,500,5,True,AVImark,True,True
+CL023,Clinic 23 Vet Care,Regional,2025-09-17,500,8,True,Cornerstone,True,True
+CL024,Clinic 24 Vet Care,Enterprise,2025-09-29,1500,10,True,ezyVet,True,True
+CL025,Clinic 25 Vet Care,Solo,2025-06-07,150,1,True,Cornerstone,False,False
