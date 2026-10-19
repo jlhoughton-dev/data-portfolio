@@ -17,3 +17,14 @@ sources:
       - name: playlists
       - name: playlisttrack
       - name: tracks
+  - name: raw_vetsample
+    database: jlhoughton-dev
+    schema: vet_saas
+    description: Dummy data for a veterinary SaaS application, used for dbt testing and demos.
+    tables:
+      - name: dim_clinics
+      - name: fct_billing
+      - name: fct_scribe_events
+      - name: raw_clinics
+      - name: raw_billing
+      - name: raw_scribe_events

@@ -33,3 +33,16 @@ models:
           - not_null
       - name: total_portfolio_revenue
         description: Total revenue attributed to the employee portfolio.
+  - name: int_clinic_monthly_activity
+    description: "Aggregates billing and AI scribe events to a monthly grain per clinic."
+    columns:
+      - name: clinic_id
+        description: "Unique identifier for the clinic."
+        tests:
+          - not_null
+      - name: activity_month
+        description: "The first day of the month for the activity period."
+        tests:
+          - not_null
+      - name: total_billed
+        description: "Total amount billed to the clinic in that month."
