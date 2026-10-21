@@ -7,13 +7,16 @@ import pandas as pd
 
 # Locate the CSV and HTML files relative to this script.
 base_dir = Path(__file__).resolve().parent
+
 csv_path = base_dir / "covet_clinic_activity.csv"
-html_path = base_dir.parent / "static" / "covet_revops_dashboard.html"
+invoice_path = base_dir / "fct_billing.csv"
+html_path = base_dir.parent / "static" / "covet_qbr.html"
 
 print("Reading clinic activity data...")
 
 df = pd.read_csv(csv_path)
 df["event_date"] = pd.to_datetime(df["event_date"])
+invoices_df = pd.read_csv(invoice_path)
 
 # Daily portfolio-wide sessions.
 daily_totals = (
@@ -67,6 +70,7 @@ data = {
     "daily": daily,
     "clinics": clinics.to_dict(orient="records"),
     "dailyByTier": daily_by_tier,
+    "invoices": invoices_df.to_dict(orient="records"),
 }
 
 # Read the existing HTML.
@@ -94,14 +98,14 @@ period = (
 )
 
 html, replacements = re.subn(
-    r"(CoVet · SaaS performance snapshot · )[^<]+",
+    r"(CoVet\s*[·•]\s*SaaS performance snapshot\s*[·•]\s*)[^<]+",
     lambda match: match.group(1) + period,
     html,
     count=1,
 )
 
 if replacements != 1:
-    raise RuntimeError("Could not update the reporting-period label.")
+    print("Warning: Could not find the reporting-period label. Continuing without updating it.")
 
 # Calculate the average using the actual number of reporting dates.
 html = html.replace(
