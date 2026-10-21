@@ -52,9 +52,9 @@ for i in range(1, 26):
         "trial_converted": trial_converted
     })
 
-    df_clinics = pd.DataFrame(clinics_data)
-    df_clinics.to_csv("dim_clinics.csv", index=False)
-    print("Saved: dim_clinics.csv (25 clinics)")
+df_clinics = pd.DataFrame(clinics_data)
+df_clinics.to_csv("dim_clinics.csv", index=False)
+print("Saved: dim_clinics.csv (25 clinics)")
 
 # =========================
 # generate event tables
@@ -64,7 +64,7 @@ print("Generating events tables...")
 
 events_data=[]
 end_date = datetime.now()
-start_usage_date = end_date - timedelta(days=90)
+start_usage_date = end_date - timedelta(days=89)
 
 current_date = start_usage_date
 while current_date <= end_date:
@@ -81,11 +81,11 @@ while current_date <= end_date:
     else:  # solo
       sessions_today = random.randint(0, 5)
 
-    pms_system = random.choices(pms_systems, weights=pms_weights, k=1)[0]
-    pms_connected = pms_system != "None"
+    # pms_system = random.choices(pms_systems, weights=pms_weights, k=1)[0]
+    # pms_connected = pms_system != "None"
 
-    is_trial_signup = random.random() < 0.85
-    trial_converted = is_trial_signup and (random.random() < 0.75)
+    # is_trial_signup = random.random() < 0.85
+    # trial_converted = is_trial_signup and (random.random() < 0.75)
 
     # add churn/drop off pattern
     if clinic_id in ["CL005", "CL012"] and current_date > (
@@ -140,7 +140,38 @@ print("✅ Saved: fct_billing.csv (Monthly subscription invoices)")
 
 print("\n🎉 All mock data files successfully generated!")
 
-# Quick merge for Looker Studio speed
-df_master = df_clinics.merge(df_billing, on="clinic_id", how="left").merge(df_events, on="clinic_id", how="left")
-df_master.to_csv("covet_master_dashboard_data.csv", index=False)
-print("✅ Saved: covet_master_dashboard_data.csv (Use this single file in Looker Studio)")
+# ==========================================
+# Generate dashboard-ready datasets
+# ==========================================
+
+# Combine daily activity with clinic details.
+# Grain: one row per clinic per date.
+df_clinic_activity = df_events.merge(
+    df_clinics,
+    on="clinic_id",
+    how="left",
+    validate="many_to_one"
+)
+
+# Confirm the merge did not change the total session count.
+original_sessions = df_events["scribe_sessions"].sum()
+merged_sessions = df_clinic_activity["scribe_sessions"].sum()
+
+assert original_sessions == merged_sessions, (
+    f"Session totals do not match: "
+    f"original={original_sessions}, merged={merged_sessions}"
+)
+
+print(f"Data quality check passed: {original_sessions:,} total scribe sessions.")
+
+df_clinic_activity.to_csv(
+    "covet_clinic_activity.csv",
+    index=False
+)
+
+print("Saved: covet_clinic_activity.csv")
+
+# # Quick merge for Looker Studio speed
+# df_master = df_clinics.merge(df_billing, on="clinic_id", how="left").merge(df_events, on="clinic_id", how="left")
+# df_master.to_csv("covet_master_dashboard_data.csv", index=False)
+# print("✅ Saved: covet_master_dashboard_data.csv (Use this single file in Looker Studio)")
